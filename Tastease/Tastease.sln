@@ -27,23 +27,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tastease.SharedKernel", "sr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tastease.UnitTests", "tests\Tastease.UnitTests\Tastease.UnitTests.csproj", "{1DC7F5A0-DDF7-4975-84EB-05F4FC1B6AB5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deliverables", "deliverables", "{2375EA72-7C58-47A2-8C95-C5344FB4377C}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "A3", "A3", "{1F78E897-6456-4685-91BA-46AFFEDC61E5}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\..\Downloads\A3.docx.pdf = ..\..\..\..\Downloads\A3.docx.pdf
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Others", "Others", "{3610DF84-1490-4652-8D0A-E35A6CBDCBAC}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\..\Downloads\A3 - Christopher Torres.docx.pdf = ..\..\..\..\Downloads\A3 - Christopher Torres.docx.pdf
-		..\..\..\..\Downloads\A3 AdeanColon.docx.pdf = ..\..\..\..\Downloads\A3 AdeanColon.docx.pdf
-		..\..\..\..\Downloads\A3YadielPerez.pdf = ..\..\..\..\Downloads\A3YadielPerez.pdf
-		..\..\..\..\Downloads\Anthony Mendez - Decontamination A3 .pdf = ..\..\..\..\Downloads\Anthony Mendez - Decontamination A3 .pdf
-		..\..\..\..\Downloads\Testing - Domain Exp. Julibert Diaz.docx.pdf = ..\..\..\..\Downloads\Testing - Domain Exp. Julibert Diaz.docx.pdf
-		..\..\..\..\Downloads\TestingA3Kemuel.docx.pdf = ..\..\..\..\Downloads\TestingA3Kemuel.docx.pdf
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -150,8 +133,6 @@ Global
 		{0776DC14-9000-47A4-A3F4-ECBCF8CEBC17} = {B31B4797-1D9F-4288-808C-BE9A31A98C7D}
 		{744AD1DC-E83E-4ACE-BE57-395395D6E357} = {106AE906-5075-410A-B941-912F811848EE}
 		{1DC7F5A0-DDF7-4975-84EB-05F4FC1B6AB5} = {B31B4797-1D9F-4288-808C-BE9A31A98C7D}
-		{1F78E897-6456-4685-91BA-46AFFEDC61E5} = {2375EA72-7C58-47A2-8C95-C5344FB4377C}
-		{3610DF84-1490-4652-8D0A-E35A6CBDCBAC} = {1F78E897-6456-4685-91BA-46AFFEDC61E5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B0F19343-8185-4A9F-9165-0EA8544BC925}
