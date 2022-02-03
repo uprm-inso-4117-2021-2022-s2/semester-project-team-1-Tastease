@@ -1,0 +1,7 @@
+{
+  "Tastease.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Tyran\\Source\\Repos\\Tastease\\Tastease\\src\\Tastease.Core",
+  "Tastease.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Tyran\\Source\\Repos\\Tastease\\Tastease\\src\\Tastease.Infrastructure",
+  "Tastease.SharedKernel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Tyran\\Source\\Repos\\Tastease\\Tastease\\src\\Tastease.SharedKernel",
+  "Tastease.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Tyran\\Source\\Repos\\Tastease\\Tastease\\tests\\Tastease.UnitTests",
+  "Tastease.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Tyran\\Source\\Repos\\Tastease\\Tastease\\src\\Tastease.Web"
+}

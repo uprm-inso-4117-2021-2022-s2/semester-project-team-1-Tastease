@@ -1,0 +1,464 @@
+﻿++Solution 'Tastease' ‎(7 of 7 projects)
+i:{00000000-0000-0000-0000-000000000000}:Tastease.sln
+++deliverables
+++A3
+++A3.docx.pdf
+++Others
+++A3 - Christopher Torres.docx.pdf
+++A3 AdeanColon.docx.pdf
+++A3YadielPerez.pdf
+++Anthony Mendez - Decontamination A3 .pdf
+++Testing - Domain Exp. Julibert Diaz.docx.pdf
+++TestingA3Kemuel.docx.pdf
+++src
+i:{00000000-0000-0000-0000-000000000000}:src
+++Tastease.Web
+i:{106ae906-5075-410a-b941-912f811848ee}:Tastease.Web
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\tastease.web.csproj
+++Connected Services 
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:>1157
+++SQL Server Database (ConnectionStrings:DefaultConnection)
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:>1436
+++SQL Server Database (ConnectionStrings:SqliteConnection)
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:>1438
+++Dependencies
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:>1156
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:>810
+i:{220361d6-9c76-4e3f-bd34-3c7b50e2ca4d}:>813
+i:{744ad1dc-e83e-4ace-be57-395395d6e357}:>808
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:>812
+i:{7d84efee-a7d9-44ad-a0a3-38ec7882d94c}:>811
+i:{0776dc14-9000-47a4-a3f4-ecbcf8cebc17}:>809
+++Analyzers
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:analyzers
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:analyzers
+i:{220361d6-9c76-4e3f-bd34-3c7b50e2ca4d}:analyzers
+i:{744ad1dc-e83e-4ace-be57-395395d6e357}:analyzers
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:analyzers
+i:{7d84efee-a7d9-44ad-a0a3-38ec7882d94c}:analyzers
+i:{0776dc14-9000-47a4-a3f4-ecbcf8cebc17}:analyzers
+++Frameworks
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:frameworks
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:frameworks
+i:{220361d6-9c76-4e3f-bd34-3c7b50e2ca4d}:frameworks
+i:{744ad1dc-e83e-4ace-be57-395395d6e357}:frameworks
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:frameworks
+i:{7d84efee-a7d9-44ad-a0a3-38ec7882d94c}:frameworks
+i:{0776dc14-9000-47a4-a3f4-ecbcf8cebc17}:frameworks
+++Microsoft.AspNetCore.App
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\microsoft.aspnetcore.app
+++Microsoft.NETCore.App
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\microsoft.netcore.app
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.core\microsoft.netcore.app
+i:{220361d6-9c76-4e3f-bd34-3c7b50e2ca4d}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.infrastructure\microsoft.netcore.app
+i:{744ad1dc-e83e-4ace-be57-395395d6e357}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.sharedkernel\microsoft.netcore.app
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:c:\users\tyran\source\repos\tastease\tastease\tests\tastease.unittests\microsoft.netcore.app
+i:{7d84efee-a7d9-44ad-a0a3-38ec7882d94c}:c:\users\tyran\source\repos\tastease\tastease\tests\tastease.functionaltests\microsoft.netcore.app
+i:{0776dc14-9000-47a4-a3f4-ecbcf8cebc17}:c:\users\tyran\source\repos\tastease\tastease\tests\tastease.integrationtests\microsoft.netcore.app
+++Packages
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:packages
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:packages
+i:{220361d6-9c76-4e3f-bd34-3c7b50e2ca4d}:packages
+i:{744ad1dc-e83e-4ace-be57-395395d6e357}:packages
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:packages
+i:{7d84efee-a7d9-44ad-a0a3-38ec7882d94c}:packages
+i:{0776dc14-9000-47a4-a3f4-ecbcf8cebc17}:packages
+++Ardalis.ApiEndpoints (3.1.0)
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:>1260
+++Ardalis.ListStartupServices (1.1.3)
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:>1261
+++Ardalis.Result (3.1.2)
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:>1255
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:>1210
+++Ardalis.Result.AspNetCore (3.0.1)
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:>1252
+++MediatR (9.0.0)
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:>1258
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:>1211
+i:{744ad1dc-e83e-4ace-be57-395395d6e357}:>1172
+++Microsoft.AspNetCore.Mvc.NewtonsoftJson (6.0.0)
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:>1259
+++Microsoft.EntityFrameworkCore.Tools (6.0.0)
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:>1262
+i:{220361d6-9c76-4e3f-bd34-3c7b50e2ca4d}:>1180
+++Microsoft.VisualStudio.Web.CodeGeneration.Design (6.0.0)
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:>1263
+++NETStandard.Library (2.0.3)
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:>1257
+i:{220361d6-9c76-4e3f-bd34-3c7b50e2ca4d}:>1179
+++Radzen.Blazor (3.14.10)
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:>2931
+++Serilog.AspNetCore (4.1.0)
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:>1254
+++Swashbuckle.AspNetCore (6.2.3)
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:>1253
+++Swashbuckle.AspNetCore.Annotations (6.2.3)
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:>1256
+++Projects
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:projects
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:projects
+i:{220361d6-9c76-4e3f-bd34-3c7b50e2ca4d}:projects
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:projects
+i:{7d84efee-a7d9-44ad-a0a3-38ec7882d94c}:projects
+i:{0776dc14-9000-47a4-a3f4-ecbcf8cebc17}:projects
+++Tastease.Infrastructure
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.infrastructure\tastease.infrastructure.csproj
+i:{106ae906-5075-410a-b941-912f811848ee}:Tastease.Infrastructure
+++Properties
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\properties\
+++launchSettings.json
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\properties\launchsettings.json
+++Filters
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\filters\
+++ValidateModelAttribute.cs
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\filters\validatemodelattribute.cs
+++Pages
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\pages\
+++_Host.cshtml
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\pages\_host.cshtml
+++_Layout.cshtml
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\pages\_layout.cshtml
+++Counter.razor
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\pages\counter.razor
+++Error.cshtml
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\pages\error.cshtml
+++Index.razor
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\pages\index.razor
+++Shared
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\shared\
+++MainLayout.razor
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\shared\mainlayout.razor
+++NavMenu.razor
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\shared\navmenu.razor
+++SurveyPrompt.razor
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\shared\surveyprompt.razor
+++wwwroot
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\wwwroot\
+++css
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\wwwroot\css\
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\wwwroot\css\open-iconic\font\css\
+++bootstrap
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\wwwroot\css\bootstrap\
+++bootstrap.min.css
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\wwwroot\css\bootstrap\bootstrap.min.css
+++bootstrap.min.css.map
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\wwwroot\css\bootstrap\bootstrap.min.css.map
+++open-iconic
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\wwwroot\css\open-iconic\
+++font
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\wwwroot\css\open-iconic\font\
+++open-iconic-bootstrap.min.css
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\wwwroot\css\open-iconic\font\css\open-iconic-bootstrap.min.css
+++fonts
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\wwwroot\css\open-iconic\font\fonts\
+++open-iconic.eot
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\wwwroot\css\open-iconic\font\fonts\open-iconic.eot
+++open-iconic.otf
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\wwwroot\css\open-iconic\font\fonts\open-iconic.otf
+++open-iconic.svg
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\wwwroot\css\open-iconic\font\fonts\open-iconic.svg
+++open-iconic.ttf
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\wwwroot\css\open-iconic\font\fonts\open-iconic.ttf
+++open-iconic.woff
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\wwwroot\css\open-iconic\font\fonts\open-iconic.woff
+++FONT-LICENSE
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\wwwroot\css\open-iconic\font-license
+++ICON-LICENSE
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\wwwroot\css\open-iconic\icon-license
+++README.md
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\wwwroot\css\open-iconic\readme.md
+++site.css
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\wwwroot\css\site.css
+++favicon.ico
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\wwwroot\favicon.ico
+++_Imports.razor
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\_imports.razor
+++App.razor
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\app.razor
+++appsettings.json
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\appsettings.json
+++database.sqlite
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\database.sqlite
+++database.sqlite-shm
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\database.sqlite-shm
+++database.sqlite-wal
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\database.sqlite-wal
+++Program.cs
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\program.cs
+++SeedData.cs
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\seeddata.cs
+++WebMarker.cs
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\webmarker.cs
+++SQL Server Database dependency with connectionId 'ConnectionStrings:DefaultConnection' is detected
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:>1437
+++SQL Server Database dependency with connectionId 'ConnectionStrings:SqliteConnection' is detected
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:>1439
+++MessagePackAnalyzer
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\.nuget\packages\messagepackanalyzer\2.1.152\analyzers\dotnet\messagepackanalyzer.dll
+++Microsoft.AspNetCore.Analyzers
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
+++Microsoft.AspNetCore.App.Analyzers
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+i:{7d84efee-a7d9-44ad-a0a3-38ec7882d94c}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+i:{0776dc14-9000-47a4-a3f4-ecbcf8cebc17}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+++Microsoft.AspNetCore.App.CodeFixes
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+i:{7d84efee-a7d9-44ad-a0a3-38ec7882d94c}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+i:{0776dc14-9000-47a4-a3f4-ecbcf8cebc17}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+++Microsoft.AspNetCore.Components.Analyzers
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:c:\users\tyran\.nuget\packages\microsoft.aspnetcore.components.analyzers\5.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.components.analyzers.dll
+i:{7d84efee-a7d9-44ad-a0a3-38ec7882d94c}:c:\users\tyran\.nuget\packages\microsoft.aspnetcore.components.analyzers\5.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.components.analyzers.dll
+i:{0776dc14-9000-47a4-a3f4-ecbcf8cebc17}:c:\users\tyran\.nuget\packages\microsoft.aspnetcore.components.analyzers\5.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.components.analyzers.dll
+++Microsoft.AspNetCore.Mvc.Analyzers
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
+++Microsoft.AspNetCore.Razor.Internal.SourceGenerator.Transport
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\source-generators\microsoft.aspnetcore.razor.internal.sourcegenerator.transport.dll
+++Microsoft.CodeAnalysis.Analyzers
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\.nuget\packages\microsoft.codeanalysis.analyzers\3.3.2\analyzers\dotnet\cs\microsoft.codeanalysis.analyzers.dll
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:c:\users\tyran\.nuget\packages\microsoft.codeanalysis.analyzers\1.1.0\analyzers\dotnet\cs\microsoft.codeanalysis.analyzers.dll
+i:{7d84efee-a7d9-44ad-a0a3-38ec7882d94c}:c:\users\tyran\.nuget\packages\microsoft.codeanalysis.analyzers\1.1.0\analyzers\dotnet\cs\microsoft.codeanalysis.analyzers.dll
+i:{0776dc14-9000-47a4-a3f4-ecbcf8cebc17}:c:\users\tyran\.nuget\packages\microsoft.codeanalysis.analyzers\1.1.0\analyzers\dotnet\cs\microsoft.codeanalysis.analyzers.dll
+++Microsoft.CodeAnalysis.CSharp.Analyzers
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\.nuget\packages\microsoft.codeanalysis.analyzers\3.3.2\analyzers\dotnet\cs\microsoft.codeanalysis.csharp.analyzers.dll
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:c:\users\tyran\.nuget\packages\microsoft.codeanalysis.analyzers\1.1.0\analyzers\dotnet\cs\microsoft.codeanalysis.csharp.analyzers.dll
+i:{7d84efee-a7d9-44ad-a0a3-38ec7882d94c}:c:\users\tyran\.nuget\packages\microsoft.codeanalysis.analyzers\1.1.0\analyzers\dotnet\cs\microsoft.codeanalysis.csharp.analyzers.dll
+i:{0776dc14-9000-47a4-a3f4-ecbcf8cebc17}:c:\users\tyran\.nuget\packages\microsoft.codeanalysis.analyzers\1.1.0\analyzers\dotnet\cs\microsoft.codeanalysis.csharp.analyzers.dll
+++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{220361d6-9c76-4e3f-bd34-3c7b50e2ca4d}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{744ad1dc-e83e-4ace-be57-395395d6e357}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{7d84efee-a7d9-44ad-a0a3-38ec7882d94c}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{0776dc14-9000-47a4-a3f4-ecbcf8cebc17}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+++Microsoft.CodeAnalysis.NetAnalyzers
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{220361d6-9c76-4e3f-bd34-3c7b50e2ca4d}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{744ad1dc-e83e-4ace-be57-395395d6e357}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{7d84efee-a7d9-44ad-a0a3-38ec7882d94c}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{0776dc14-9000-47a4-a3f4-ecbcf8cebc17}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+++Microsoft.EntityFrameworkCore.Analyzers
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.0\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{220361d6-9c76-4e3f-bd34-3c7b50e2ca4d}:c:\users\tyran\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.0\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:c:\users\tyran\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.0\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{7d84efee-a7d9-44ad-a0a3-38ec7882d94c}:c:\users\tyran\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.0\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{0776dc14-9000-47a4-a3f4-ecbcf8cebc17}:c:\users\tyran\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.0\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+++Microsoft.Extensions.Logging.Generators
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{220361d6-9c76-4e3f-bd34-3c7b50e2ca4d}:c:\users\tyran\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{7d84efee-a7d9-44ad-a0a3-38ec7882d94c}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{0776dc14-9000-47a4-a3f4-ecbcf8cebc17}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+++Microsoft.NET.Sdk.Razor.SourceGenerators
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
+++System.Text.Json.SourceGeneration
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.1\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.1\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{220361d6-9c76-4e3f-bd34-3c7b50e2ca4d}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.1\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{744ad1dc-e83e-4ace-be57-395395d6e357}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.1\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.1\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{7d84efee-a7d9-44ad-a0a3-38ec7882d94c}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.1\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{0776dc14-9000-47a4-a3f4-ecbcf8cebc17}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.1\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+++Error.cshtml.cs
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\pages\error.cshtml.cs
+++MainLayout.razor.css
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\shared\mainlayout.razor.css
+++NavMenu.razor.css
+i:{c9751cb7-4cd6-4633-a99a-4f6add525437}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.web\shared\navmenu.razor.css
+++Tastease.Core
+i:{106ae906-5075-410a-b941-912f811848ee}:Tastease.Core
+i:{220361d6-9c76-4e3f-bd34-3c7b50e2ca4d}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.core\tastease.core.csproj
+++Ardalis.GuardClauses (3.3.0)
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:>1215
+++Ardalis.Specification (5.2.0)
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:>1213
+i:{744ad1dc-e83e-4ace-be57-395395d6e357}:>1175
+++Autofac (6.3.0)
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:>1217
+i:{220361d6-9c76-4e3f-bd34-3c7b50e2ca4d}:>1185
+++Tastease.SharedKernel
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.sharedkernel\tastease.sharedkernel.csproj
+i:{220361d6-9c76-4e3f-bd34-3c7b50e2ca4d}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.sharedkernel\tastease.sharedkernel.csproj
+i:{106ae906-5075-410a-b941-912f811848ee}:Tastease.SharedKernel
+++Interfaces
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.core\interfaces\
+i:{744ad1dc-e83e-4ace-be57-395395d6e357}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.sharedkernel\interfaces\
+++IEmailSender.cs
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.core\interfaces\iemailsender.cs
+++IToDoItemSearchService.cs
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.core\interfaces\itodoitemsearchservice.cs
+++ProjectAggregate
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.core\projectaggregate\
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:c:\users\tyran\source\repos\tastease\tastease\tests\tastease.unittests\core\projectaggregate\
+++Events
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.core\projectaggregate\events\
+++NewItemAddedEvent.cs
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.core\projectaggregate\events\newitemaddedevent.cs
+++ToDoItemCompletedEvent.cs
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.core\projectaggregate\events\todoitemcompletedevent.cs
+++Handlers
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.core\projectaggregate\handlers\
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:c:\users\tyran\source\repos\tastease\tastease\tests\tastease.unittests\core\handlers\
+++ItemCompletedEmailNotificationHandler.cs
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.core\projectaggregate\handlers\itemcompletedemailnotificationhandler.cs
+++Specifications
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.core\projectaggregate\specifications\
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:c:\users\tyran\source\repos\tastease\tastease\tests\tastease.unittests\core\specifications\
+++IncompleteItemsSearchSpec.cs
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.core\projectaggregate\specifications\incompleteitemssearchspec.cs
+++IncompleteItemsSpec.cs
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.core\projectaggregate\specifications\incompleteitemsspec.cs
+++ProjectByIdWithItemsSpec.cs
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.core\projectaggregate\specifications\projectbyidwithitemsspec.cs
+++Project.cs
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.core\projectaggregate\project.cs
+++ProjectStatus.cs
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.core\projectaggregate\projectstatus.cs
+++ToDoItem.cs
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.core\projectaggregate\todoitem.cs
+++Services
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.core\services\
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:c:\users\tyran\source\repos\tastease\tastease\tests\tastease.unittests\core\services\
+++ToDoItemSearchService.cs
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.core\services\todoitemsearchservice.cs
+++DefaultCoreModule.cs
+i:{4548eb20-1d1b-477b-af6e-dd55653a6583}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.core\defaultcoremodule.cs
+++Data
+i:{220361d6-9c76-4e3f-bd34-3c7b50e2ca4d}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.infrastructure\data\
+i:{0776dc14-9000-47a4-a3f4-ecbcf8cebc17}:c:\users\tyran\source\repos\tastease\tastease\tests\tastease.integrationtests\data\
+++Config
+i:{220361d6-9c76-4e3f-bd34-3c7b50e2ca4d}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.infrastructure\data\config\
+++ProjectConfiguration.cs
+i:{220361d6-9c76-4e3f-bd34-3c7b50e2ca4d}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.infrastructure\data\config\projectconfiguration.cs
+++ToDoConfiguration.cs
+i:{220361d6-9c76-4e3f-bd34-3c7b50e2ca4d}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.infrastructure\data\config\todoconfiguration.cs
+++AppDbContext.cs
+i:{220361d6-9c76-4e3f-bd34-3c7b50e2ca4d}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.infrastructure\data\appdbcontext.cs
+++EfRepository.cs
+i:{220361d6-9c76-4e3f-bd34-3c7b50e2ca4d}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.infrastructure\data\efrepository.cs
+++DefaultInfrastructureModule.cs
+i:{220361d6-9c76-4e3f-bd34-3c7b50e2ca4d}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.infrastructure\defaultinfrastructuremodule.cs
+++EmailSender.cs
+i:{220361d6-9c76-4e3f-bd34-3c7b50e2ca4d}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.infrastructure\emailsender.cs
+++StartupSetup.cs
+i:{220361d6-9c76-4e3f-bd34-3c7b50e2ca4d}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.infrastructure\startupsetup.cs
+++Ardalis.EFCore.Extensions (1.1.0)
+i:{220361d6-9c76-4e3f-bd34-3c7b50e2ca4d}:>1182
+++Ardalis.Specification.EntityFrameworkCore (5.2.0)
+i:{220361d6-9c76-4e3f-bd34-3c7b50e2ca4d}:>1183
+++Autofac.Extensions.DependencyInjection (7.2.0)
+i:{220361d6-9c76-4e3f-bd34-3c7b50e2ca4d}:>1176
+++Microsoft.EntityFrameworkCore.Sqlite (6.0.0)
+i:{220361d6-9c76-4e3f-bd34-3c7b50e2ca4d}:>1177
+++Microsoft.EntityFrameworkCore.SqlServer (6.0.0)
+i:{220361d6-9c76-4e3f-bd34-3c7b50e2ca4d}:>1173
+++SQLite (3.13.0)
+i:{220361d6-9c76-4e3f-bd34-3c7b50e2ca4d}:>1171
+++IAggregateRoot.cs
+i:{744ad1dc-e83e-4ace-be57-395395d6e357}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.sharedkernel\interfaces\iaggregateroot.cs
+++IReadRepository.cs
+i:{744ad1dc-e83e-4ace-be57-395395d6e357}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.sharedkernel\interfaces\ireadrepository.cs
+++IRepository.cs
+i:{744ad1dc-e83e-4ace-be57-395395d6e357}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.sharedkernel\interfaces\irepository.cs
+++BaseDomainEvent.cs
+i:{744ad1dc-e83e-4ace-be57-395395d6e357}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.sharedkernel\basedomainevent.cs
+++BaseEntity.cs
+i:{744ad1dc-e83e-4ace-be57-395395d6e357}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.sharedkernel\baseentity.cs
+++IgnoreMemberAttribute.cs
+i:{744ad1dc-e83e-4ace-be57-395395d6e357}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.sharedkernel\ignorememberattribute.cs
+++ValueObject.cs
+i:{744ad1dc-e83e-4ace-be57-395395d6e357}:c:\users\tyran\source\repos\tastease\tastease\src\tastease.sharedkernel\valueobject.cs
+++tests
+i:{00000000-0000-0000-0000-000000000000}:tests
+++Tastease.UnitTests
+i:{b31b4797-1d9f-4288-808c-be9a31a98c7d}:Tastease.UnitTests
+i:{7d84efee-a7d9-44ad-a0a3-38ec7882d94c}:c:\users\tyran\source\repos\tastease\tastease\tests\tastease.unittests\tastease.unittests.csproj
+i:{0776dc14-9000-47a4-a3f4-ecbcf8cebc17}:c:\users\tyran\source\repos\tastease\tastease\tests\tastease.unittests\tastease.unittests.csproj
+++coverlet.collector (3.1.0)
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:>1239
+i:{7d84efee-a7d9-44ad-a0a3-38ec7882d94c}:>1195
+i:{0776dc14-9000-47a4-a3f4-ecbcf8cebc17}:>1225
+++Microsoft.NET.Test.Sdk (17.0.0)
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:>1234
+i:{7d84efee-a7d9-44ad-a0a3-38ec7882d94c}:>1188
+i:{0776dc14-9000-47a4-a3f4-ecbcf8cebc17}:>1218
+++Microsoft.Playwright.NUnit (1.18.0)
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:>2928
+i:{7d84efee-a7d9-44ad-a0a3-38ec7882d94c}:>2930
+i:{0776dc14-9000-47a4-a3f4-ecbcf8cebc17}:>2929
+++Moq (4.16.1)
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:>1238
+++ReportGenerator (4.8.13)
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:>1235
+++xunit (2.4.1)
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:>1236
+i:{7d84efee-a7d9-44ad-a0a3-38ec7882d94c}:>1192
+i:{0776dc14-9000-47a4-a3f4-ecbcf8cebc17}:>1222
+++xunit.runner.visualstudio (2.4.3)
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:>1237
+i:{7d84efee-a7d9-44ad-a0a3-38ec7882d94c}:>1194
+i:{0776dc14-9000-47a4-a3f4-ecbcf8cebc17}:>1224
+++Core
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:c:\users\tyran\source\repos\tastease\tastease\tests\tastease.unittests\core\
+++NoOpMediator.cs
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:c:\users\tyran\source\repos\tastease\tastease\tests\tastease.unittests\noopmediator.cs
+++ToDoItemBuilder.cs
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:c:\users\tyran\source\repos\tastease\tastease\tests\tastease.unittests\todoitembuilder.cs
+++xunit.runner.json
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:c:\users\tyran\source\repos\tastease\tastease\tests\tastease.unittests\xunit.runner.json
+i:{7d84efee-a7d9-44ad-a0a3-38ec7882d94c}:c:\users\tyran\source\repos\tastease\tastease\tests\tastease.functionaltests\xunit.runner.json
+++xunit.analyzers
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:c:\users\tyran\.nuget\packages\xunit.analyzers\0.10.0\analyzers\dotnet\cs\xunit.analyzers.dll
+i:{7d84efee-a7d9-44ad-a0a3-38ec7882d94c}:c:\users\tyran\.nuget\packages\xunit.analyzers\0.10.0\analyzers\dotnet\cs\xunit.analyzers.dll
+i:{0776dc14-9000-47a4-a3f4-ecbcf8cebc17}:c:\users\tyran\.nuget\packages\xunit.analyzers\0.10.0\analyzers\dotnet\cs\xunit.analyzers.dll
+++ItemCompletedEmailNotificationHandlerHandle.cs
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:c:\users\tyran\source\repos\tastease\tastease\tests\tastease.unittests\core\handlers\itemcompletedemailnotificationhandlerhandle.cs
+++Project_AddItem.cs
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:c:\users\tyran\source\repos\tastease\tastease\tests\tastease.unittests\core\projectaggregate\project_additem.cs
+++ProjectConstructor.cs
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:c:\users\tyran\source\repos\tastease\tastease\tests\tastease.unittests\core\projectaggregate\projectconstructor.cs
+++ToDoItemMarkComplete.cs
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:c:\users\tyran\source\repos\tastease\tastease\tests\tastease.unittests\core\projectaggregate\todoitemmarkcomplete.cs
+++IncompleteItemSpecificationsConstructor.cs
+i:{1dc7f5a0-ddf7-4975-84eb-05f4fc1b6ab5}:c:\users\tyran\source\repos\tastease\tastease\tests\tastease.unittests\core\specifications\incompleteitemspecificationsconstructor.cs
+++Tastease.FunctionalTests
+i:{b31b4797-1d9f-4288-808c-be9a31a98c7d}:Tastease.FunctionalTests
+++ApiEndpoints
+++ControllerApis
+++ControllerViews
+i:{7d84efee-a7d9-44ad-a0a3-38ec7882d94c}:c:\users\tyran\source\repos\tastease\tastease\tests\tastease.functionaltests\controllerviews\
+++CustomWebApplicationFactory.cs
+i:{7d84efee-a7d9-44ad-a0a3-38ec7882d94c}:c:\users\tyran\source\repos\tastease\tastease\tests\tastease.functionaltests\customwebapplicationfactory.cs
+++ProjectGetById.cs
+++ProjectList.cs
+++ApiProjectsControllerList.cs
+++MetaControllerInfo.cs
+++HomeControllerIndex.cs
+i:{7d84efee-a7d9-44ad-a0a3-38ec7882d94c}:c:\users\tyran\source\repos\tastease\tastease\tests\tastease.functionaltests\controllerviews\homecontrollerindex.cs
+++Ardalis.HttpClientTestExtensions (1.0.0)
+i:{7d84efee-a7d9-44ad-a0a3-38ec7882d94c}:>1191
+++Microsoft.AspNetCore.Mvc.Testing (6.0.0)
+i:{7d84efee-a7d9-44ad-a0a3-38ec7882d94c}:>1190
+i:{0776dc14-9000-47a4-a3f4-ecbcf8cebc17}:>1219
+++Microsoft.EntityFrameworkCore.InMemory (6.0.0)
+i:{7d84efee-a7d9-44ad-a0a3-38ec7882d94c}:>1193
+i:{0776dc14-9000-47a4-a3f4-ecbcf8cebc17}:>1223
+++Newtonsoft.Json (13.0.1)
+i:{7d84efee-a7d9-44ad-a0a3-38ec7882d94c}:>1189
+++Tastease.IntegrationTests
+i:{b31b4797-1d9f-4288-808c-be9a31a98c7d}:Tastease.IntegrationTests
+++BaseEfRepoTestFixture.cs
+i:{0776dc14-9000-47a4-a3f4-ecbcf8cebc17}:c:\users\tyran\source\repos\tastease\tastease\tests\tastease.integrationtests\data\baseefrepotestfixture.cs
+++EfRepositoryAdd.cs
+i:{0776dc14-9000-47a4-a3f4-ecbcf8cebc17}:c:\users\tyran\source\repos\tastease\tastease\tests\tastease.integrationtests\data\efrepositoryadd.cs
+++EfRepositoryDelete.cs
+i:{0776dc14-9000-47a4-a3f4-ecbcf8cebc17}:c:\users\tyran\source\repos\tastease\tastease\tests\tastease.integrationtests\data\efrepositorydelete.cs
+++EfRepositoryUpdate.cs
+i:{0776dc14-9000-47a4-a3f4-ecbcf8cebc17}:c:\users\tyran\source\repos\tastease\tastease\tests\tastease.integrationtests\data\efrepositoryupdate.cs
+++NewFolder1
+++d

@@ -1,0 +1,7 @@
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\tests\Tastease.FunctionalTests\bin\Debug\net6.0\CoverletSourceRootsMapping
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\tests\Tastease.FunctionalTests\obj\Debug\net6.0\Tastease.FunctionalTests.csproj.AssemblyReference.cache
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\tests\Tastease.FunctionalTests\obj\Debug\net6.0\MvcTestingAppManifest.json
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\tests\Tastease.FunctionalTests\obj\Debug\net6.0\Tastease.FunctionalTests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\tests\Tastease.FunctionalTests\obj\Debug\net6.0\Tastease.FunctionalTests.AssemblyInfoInputs.cache
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\tests\Tastease.FunctionalTests\obj\Debug\net6.0\Tastease.FunctionalTests.AssemblyInfo.cs
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\tests\Tastease.FunctionalTests\obj\Debug\net6.0\Tastease.FunctionalTests.csproj.CoreCompileInputs.cache
