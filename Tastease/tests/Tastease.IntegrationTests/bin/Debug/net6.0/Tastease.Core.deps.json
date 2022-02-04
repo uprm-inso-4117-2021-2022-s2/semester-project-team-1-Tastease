@@ -1,0 +1,149 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Tastease.Core/1.0.0": {
+        "dependencies": {
+          "Ardalis.GuardClauses": "3.3.0",
+          "Ardalis.Result": "3.1.2",
+          "Ardalis.Specification": "5.2.0",
+          "Autofac": "6.3.0",
+          "MediatR": "9.0.0",
+          "Tastease.SharedKernel": "1.0.0"
+        },
+        "runtime": {
+          "Tastease.Core.dll": {}
+        }
+      },
+      "Ardalis.GuardClauses/3.3.0": {
+        "dependencies": {
+          "JetBrains.Annotations": "2021.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Ardalis.GuardClauses.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.0.0"
+          }
+        }
+      },
+      "Ardalis.Result/3.1.2": {
+        "runtime": {
+          "lib/netstandard2.0/Ardalis.Result.dll": {
+            "assemblyVersion": "3.1.2.0",
+            "fileVersion": "3.1.2.0"
+          }
+        }
+      },
+      "Ardalis.Specification/5.2.0": {
+        "runtime": {
+          "lib/netstandard2.0/Ardalis.Specification.dll": {
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.0.0"
+          }
+        }
+      },
+      "Autofac/6.3.0": {
+        "dependencies": {
+          "System.Diagnostics.DiagnosticSource": "4.7.1"
+        },
+        "runtime": {
+          "lib/net5.0/Autofac.dll": {
+            "assemblyVersion": "6.3.0.0",
+            "fileVersion": "6.3.0.0"
+          }
+        }
+      },
+      "JetBrains.Annotations/2021.2.0": {
+        "runtime": {
+          "lib/netstandard2.0/JetBrains.Annotations.dll": {
+            "assemblyVersion": "2021.2.0.0",
+            "fileVersion": "2021.2.0.0"
+          }
+        }
+      },
+      "MediatR/9.0.0": {
+        "runtime": {
+          "lib/netstandard2.1/MediatR.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.0.0"
+          }
+        }
+      },
+      "System.Diagnostics.DiagnosticSource/4.7.1": {},
+      "Tastease.SharedKernel/1.0.0": {
+        "dependencies": {
+          "Ardalis.Specification": "5.2.0",
+          "MediatR": "9.0.0"
+        },
+        "runtime": {
+          "Tastease.SharedKernel.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Tastease.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Ardalis.GuardClauses/3.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-F/Qa2SLvRMWaVVT2pNFLeMoiGROUnwpMvnREG4KN3MxPsLrTIUi42/PCFXZ5H0N6wXCTAxzd8/gWNgcvoB9eNg==",
+      "path": "ardalis.guardclauses/3.3.0",
+      "hashPath": "ardalis.guardclauses.3.3.0.nupkg.sha512"
+    },
+    "Ardalis.Result/3.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UPdK9s8QIQXc+XOkJp1/r3v+vFObDzjTm9onKNgTbqIJrccA098h0VUOzhzLwh7LcjbByOMpNgoVVFhPsyrNIQ==",
+      "path": "ardalis.result/3.1.2",
+      "hashPath": "ardalis.result.3.1.2.nupkg.sha512"
+    },
+    "Ardalis.Specification/5.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LYvbL3vln7wu1QzSkogEtjBgrJD+AUJDYsyPFtFHmvRYxb0f8JwGOXarlG8B+TUZKf0dgoWr+bB0fmEkKKEbBQ==",
+      "path": "ardalis.specification/5.2.0",
+      "hashPath": "ardalis.specification.5.2.0.nupkg.sha512"
+    },
+    "Autofac/6.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gO4bli0N8tDnBHzbYktcnbXlmN6T+IT5W+FUGgCUaM6pwwHXIxOPoUGvfGum7sZpJJgfQNgjFFv80ZPuARgRdA==",
+      "path": "autofac/6.3.0",
+      "hashPath": "autofac.6.3.0.nupkg.sha512"
+    },
+    "JetBrains.Annotations/2021.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kKSyoVfndMriKHLfYGmr0uzQuI4jcc3TKGyww7buJFCYeHb/X0kodYBPL7n9454q7v6ASiRmDgpPGaDGerg/Hg==",
+      "path": "jetbrains.annotations/2021.2.0",
+      "hashPath": "jetbrains.annotations.2021.2.0.nupkg.sha512"
+    },
+    "MediatR/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8b3UYNxegHVYcJMG2zH8wn+YqxLvXG+eMfj0cMCq/jTW72p6O3PCKMkrIv0mqyxdW7bA4gblsocw7n+/9Akg5g==",
+      "path": "mediatr/9.0.0",
+      "hashPath": "mediatr.9.0.0.nupkg.sha512"
+    },
+    "System.Diagnostics.DiagnosticSource/4.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-j81Lovt90PDAq8kLpaJfJKV/rWdWuEk6jfV+MBkee33vzYLEUsy4gXK8laa9V2nZlLM9VM9yA/OOQxxPEJKAMw==",
+      "path": "system.diagnostics.diagnosticsource/4.7.1",
+      "hashPath": "system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
+    },
+    "Tastease.SharedKernel/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
