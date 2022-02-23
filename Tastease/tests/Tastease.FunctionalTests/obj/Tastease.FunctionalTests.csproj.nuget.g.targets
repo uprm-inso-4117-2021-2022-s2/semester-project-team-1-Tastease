@@ -8,6 +8,9 @@
     <Import Project="$(NuGetPackageRoot)microsoft.codecoverage\17.0.0\build\netstandard1.0\Microsoft.CodeCoverage.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.codecoverage\17.0.0\build\netstandard1.0\Microsoft.CodeCoverage.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.net.test.sdk\17.0.0\build\netcoreapp2.1\Microsoft.NET.Test.Sdk.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.net.test.sdk\17.0.0\build\netcoreapp2.1\Microsoft.NET.Test.Sdk.targets')" />
     <Import Project="$(NuGetPackageRoot)coverlet.collector\3.1.0\build\netstandard1.0\coverlet.collector.targets" Condition="Exists('$(NuGetPackageRoot)coverlet.collector\3.1.0\build\netstandard1.0\coverlet.collector.targets')" />
+    <Import Project="$(NuGetPackageRoot)specflow\3.9.52\build\SpecFlow.targets" Condition="Exists('$(NuGetPackageRoot)specflow\3.9.52\build\SpecFlow.targets')" />
+    <Import Project="$(NuGetPackageRoot)specflow.tools.msbuild.generation\3.9.52\build\SpecFlow.Tools.MsBuild.Generation.targets" Condition="Exists('$(NuGetPackageRoot)specflow.tools.msbuild.generation\3.9.52\build\SpecFlow.Tools.MsBuild.Generation.targets')" />
+    <Import Project="$(NuGetPackageRoot)specflow.xunit\3.9.52\build\SpecFlow.xUnit.targets" Condition="Exists('$(NuGetPackageRoot)specflow.xunit\3.9.52\build\SpecFlow.xUnit.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.mvc.testing\6.0.0\buildTransitive\net6.0\Microsoft.AspNetCore.Mvc.Testing.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.mvc.testing\6.0.0\buildTransitive\net6.0\Microsoft.AspNetCore.Mvc.Testing.targets')" />
   </ImportGroup>
 </Project>
