@@ -9,6 +9,6 @@ public class MeasuredIngredient
 }
 public enum MeasurementUnit
 {
-  ounces, gallons,
+  Ounces, Gallons, Grams, Cups, Teaspoons, Tablespoon, Liters, Milliters
 }
 

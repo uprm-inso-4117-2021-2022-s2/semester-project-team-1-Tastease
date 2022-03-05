@@ -2,5 +2,5 @@
 
 public enum Serverity 
 {
-  severe, moderate
+  Severe, Moderate
 }

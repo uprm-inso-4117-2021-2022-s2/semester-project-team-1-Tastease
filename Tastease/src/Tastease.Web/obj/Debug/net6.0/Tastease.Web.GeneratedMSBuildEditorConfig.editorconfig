@@ -8,11 +8,11 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Tastease.Web
 build_property.RootNamespace = Tastease.Web
-build_property.ProjectDir = C:\Users\Tyran\source\repos\Tastease\Tastease\src\Tastease.Web\
+build_property.ProjectDir = C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Tyran\source\repos\Tastease\Tastease\src\Tastease.Web
+build_property.MSBuildProjectDirectory = C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web
 build_property._RazorSourceGeneratorDebug = 
 
 [C:/Users/Tyran/Source/Repos/Tastease/Tastease/src/Tastease.Web/App.razor]

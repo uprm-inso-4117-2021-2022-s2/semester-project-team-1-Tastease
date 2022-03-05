@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Tastease.Core.ProjectAggregate.Cook">
+    <Position X="3.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAIAQAAAAAAAAAAQAAIAAAAAA=</HashCode>
+      <FileName>ProjectAggregate\Cook.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CulinarySkill" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Recipes" />
+      <Property Name="Pantries" />
+      <Property Name="Allergies" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Tastease.SharedKernel.BaseEntity">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Tastease.Core.ProjectAggregate.Pantry">
+    <Position X="6" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgCQAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>ProjectAggregate\Pantry.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Cook" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Appliances" />
+      <Property Name="Ingredients" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Tastease.Core.ProjectAggregate.Allergy">
+    <Position X="8" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProjectAggregate\Allergy.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Serverity" />
+      <Property Name="Ingredient" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Tastease.Core.ProjectAggregate.Recipe">
+    <Position X="8.25" Y="6.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ACIABAAAAAAgAAAAAAAAAKQAAAAIAAEAAAAAChAAAQA=</HashCode>
+      <FileName>ProjectAggregate\Recipe.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ExecutionDifficulty" />
+      <Property Name="Cuisine" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Ingredients" />
+      <Property Name="Appliances" />
+      <Property Name="Courses" />
+      <Property Name="Instructions" />
+      <Property Name="NutritionalProperties" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Tastease.Core.ProjectAggregate.Appliance">
+    <Position X="5.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProjectAggregate\Appliance.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tastease.Core.ProjectAggregate.Ingredient">
+    <Position X="10.75" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAQAAAADAAAA=</HashCode>
+      <FileName>ProjectAggregate\Ingredient.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="ShelfLives" />
+      <Property Name="NutritionalValues" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Tastease.Core.ProjectAggregate.ShelfLife">
+    <Position X="14.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAABAAAAAA=</HashCode>
+      <FileName>ProjectAggregate\ShelfLife.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="State" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Tastease.Core.ProjectAggregate.NutritionalProperty">
+    <Position X="12.25" Y="9.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAACAA=</HashCode>
+      <FileName>ProjectAggregate\NutritionalProperty.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Category" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Tastease.Core.ProjectAggregate.Cuisine">
+    <Position X="8.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProjectAggregate\Cuisine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tastease.Core.ProjectAggregate.Instruction">
+    <Position X="12" Y="7" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAEAAAAAAAAAAAAAAIAAAAAAAAoA=</HashCode>
+      <FileName>ProjectAggregate\Instruction.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Appliance" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="MeasuredIngredients" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Tastease.Core.ProjectAggregate.MeasuredIngredient">
+    <Position X="10.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>ProjectAggregate\MeasuredIngredient.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Ingredient" />
+      <Property Name="Unit" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="Tastease.Core.ProjectAggregate.CulinarySkill">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAQAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProjectAggregate\CulinarySkill.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Tastease.Core.ProjectAggregate.NutritionalCategory">
+    <Position X="12" Y="11.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAgAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAEAAA=</HashCode>
+      <FileName>ProjectAggregate\NutritionalCategory.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Tastease.Core.ProjectAggregate.State">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAgQAA=</HashCode>
+      <FileName>ProjectAggregate\ShelfLife.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Tastease.Core.ProjectAggregate.IngredientType">
+    <Position X="14.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAggAAAAAAAAAAAAAAAIAAAAAAAIAAAAAAAAABAAA=</HashCode>
+      <FileName>ProjectAggregate\IngredientType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Tastease.Core.ProjectAggregate.Serverity">
+    <Position X="5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProjectAggregate\Serverity.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Tastease.Core.ProjectAggregate.Course">
+    <Position X="13.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAABAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>ProjectAggregate\Course.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Tastease.Core.ProjectAggregate.ExecutionDifficulty">
+    <Position X="5.5" Y="10.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAQAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProjectAggregate\ExecutionDifficulty.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Tastease.Core.ProjectAggregate.MeasurementUnit">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAQAAgAAAQAAACECAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>ProjectAggregate\MeasuredIngredient.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
