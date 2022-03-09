@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tyran\\Source\\Repos\\Tastease\\Tastease\\src\\Tastease.SharedKernel\\Tastease.SharedKernel.csproj": {}
+    "C:\\Users\\Tyran\\source\\repos\\Tastease\\Tastease\\src\\Tastease.SharedKernel\\Tastease.SharedKernel.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tyran\\Source\\Repos\\Tastease\\Tastease\\src\\Tastease.SharedKernel\\Tastease.SharedKernel.csproj": {
+    "C:\\Users\\Tyran\\source\\repos\\Tastease\\Tastease\\src\\Tastease.SharedKernel\\Tastease.SharedKernel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tyran\\Source\\Repos\\Tastease\\Tastease\\src\\Tastease.SharedKernel\\Tastease.SharedKernel.csproj",
+        "projectUniqueName": "C:\\Users\\Tyran\\source\\repos\\Tastease\\Tastease\\src\\Tastease.SharedKernel\\Tastease.SharedKernel.csproj",
         "projectName": "Tastease.SharedKernel",
-        "projectPath": "C:\\Users\\Tyran\\Source\\Repos\\Tastease\\Tastease\\src\\Tastease.SharedKernel\\Tastease.SharedKernel.csproj",
+        "projectPath": "C:\\Users\\Tyran\\source\\repos\\Tastease\\Tastease\\src\\Tastease.SharedKernel\\Tastease.SharedKernel.csproj",
         "packagesPath": "C:\\Users\\Tyran\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tyran\\Source\\Repos\\Tastease\\Tastease\\src\\Tastease.SharedKernel\\obj\\",
+        "outputPath": "C:\\Users\\Tyran\\source\\repos\\Tastease\\Tastease\\src\\Tastease.SharedKernel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tyran\\source\\repos\\Tastease\\Tastease\\NuGet.Config",
@@ -43,11 +43,11 @@
           "dependencies": {
             "Ardalis.Specification": {
               "target": "Package",
-              "version": "[5.2.0, )"
+              "version": "[6.0.1, )"
             },
             "MediatR": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[10.0.1, )"
             }
           },
           "imports": [

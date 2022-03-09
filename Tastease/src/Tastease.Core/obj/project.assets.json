@@ -2,16 +2,16 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "Ardalis.GuardClauses/3.3.0": {
+      "Ardalis.GuardClauses/4.0.0": {
         "type": "package",
         "dependencies": {
           "JetBrains.Annotations": "2021.2.0"
         },
         "compile": {
-          "lib/netstandard2.0/Ardalis.GuardClauses.dll": {}
+          "lib/net6.0/Ardalis.GuardClauses.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Ardalis.GuardClauses.dll": {}
+          "lib/net6.0/Ardalis.GuardClauses.dll": {}
         }
       },
       "Ardalis.Result/3.1.2": {
@@ -23,7 +23,7 @@
           "lib/netstandard2.0/Ardalis.Result.dll": {}
         }
       },
-      "Ardalis.Specification/5.2.0": {
+      "Ardalis.Specification/6.0.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Ardalis.Specification.dll": {}
@@ -53,13 +53,25 @@
           "lib/netstandard2.0/JetBrains.Annotations.dll": {}
         }
       },
-      "MediatR/9.0.0": {
+      "MediatR/10.0.1": {
         "type": "package",
+        "dependencies": {
+          "MediatR.Contracts": "1.0.1"
+        },
         "compile": {
           "lib/netstandard2.1/MediatR.dll": {}
         },
         "runtime": {
           "lib/netstandard2.1/MediatR.dll": {}
+        }
+      },
+      "MediatR.Contracts/1.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MediatR.Contracts.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MediatR.Contracts.dll": {}
         }
       },
       "System.Diagnostics.DiagnosticSource/4.7.1": {
@@ -75,8 +87,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Ardalis.Specification": "5.2.0",
-          "MediatR": "9.0.0"
+          "Ardalis.Specification": "6.0.1",
+          "MediatR": "10.0.1"
         },
         "compile": {
           "bin/placeholder/Tastease.SharedKernel.dll": {}
@@ -88,19 +100,22 @@
     }
   },
   "libraries": {
-    "Ardalis.GuardClauses/3.3.0": {
-      "sha512": "F/Qa2SLvRMWaVVT2pNFLeMoiGROUnwpMvnREG4KN3MxPsLrTIUi42/PCFXZ5H0N6wXCTAxzd8/gWNgcvoB9eNg==",
+    "Ardalis.GuardClauses/4.0.0": {
+      "sha512": "ejYmLzXNEVPlWTQUxyGAWt2uvBqVOPaVkBPgMn7FR9y5ekG5NyalSPxop7rHq1ohAyDGiCS3FUYhK0zSm/du0A==",
       "type": "package",
-      "path": "ardalis.guardclauses/3.3.0",
+      "path": "ardalis.guardclauses/4.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "ardalis.guardclauses.3.3.0.nupkg.sha512",
+        "ardalis.guardclauses.4.0.0.nupkg.sha512",
         "ardalis.guardclauses.nuspec",
         "icon.png",
-        "lib/net40/Ardalis.GuardClauses.dll",
-        "lib/net40/Ardalis.GuardClauses.pdb",
-        "lib/net40/Ardalis.GuardClauses.xml",
+        "lib/net451/Ardalis.GuardClauses.dll",
+        "lib/net451/Ardalis.GuardClauses.pdb",
+        "lib/net451/Ardalis.GuardClauses.xml",
+        "lib/net6.0/Ardalis.GuardClauses.dll",
+        "lib/net6.0/Ardalis.GuardClauses.pdb",
+        "lib/net6.0/Ardalis.GuardClauses.xml",
         "lib/netstandard2.0/Ardalis.GuardClauses.dll",
         "lib/netstandard2.0/Ardalis.GuardClauses.pdb",
         "lib/netstandard2.0/Ardalis.GuardClauses.xml"
@@ -119,18 +134,19 @@
         "lib/netstandard2.0/Ardalis.Result.dll"
       ]
     },
-    "Ardalis.Specification/5.2.0": {
-      "sha512": "LYvbL3vln7wu1QzSkogEtjBgrJD+AUJDYsyPFtFHmvRYxb0f8JwGOXarlG8B+TUZKf0dgoWr+bB0fmEkKKEbBQ==",
+    "Ardalis.Specification/6.0.1": {
+      "sha512": "eLtJq5eI1wXDxPZQY3DW4lKFYgGuBobe9Z60L0uYjEnKQ3t2ACVvnD+qXaL4wfJ9r8aAAv6TAj640RwPZK5BEw==",
       "type": "package",
-      "path": "ardalis.specification/5.2.0",
+      "path": "ardalis.specification/6.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "ardalis.specification.5.2.0.nupkg.sha512",
+        "ardalis.specification.6.0.1.nupkg.sha512",
         "ardalis.specification.nuspec",
         "icon.png",
         "lib/netstandard2.0/Ardalis.Specification.dll",
-        "lib/netstandard2.0/Ardalis.Specification.pdb"
+        "lib/netstandard2.0/Ardalis.Specification.pdb",
+        "lib/netstandard2.0/Ardalis.Specification.xml"
       ]
     },
     "Autofac/6.3.0": {
@@ -176,22 +192,34 @@
         "lib/portable40-net40+sl5+win8+wp8+wpa81/JetBrains.Annotations.xml"
       ]
     },
-    "MediatR/9.0.0": {
-      "sha512": "8b3UYNxegHVYcJMG2zH8wn+YqxLvXG+eMfj0cMCq/jTW72p6O3PCKMkrIv0mqyxdW7bA4gblsocw7n+/9Akg5g==",
+    "MediatR/10.0.1": {
+      "sha512": "vnjbk4giDJzJelh34Ygt0eorApCKrRFB7j0pauFPY1oxfO3cEZ7FugBrIOjCM76SDGTOmPFfbfmVnz1t3iFrGA==",
       "type": "package",
-      "path": "mediatr/9.0.0",
+      "path": "mediatr/10.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "gradient_128x128.png",
-        "lib/net461/MediatR.dll",
-        "lib/net461/MediatR.xml",
-        "lib/netstandard2.0/MediatR.dll",
-        "lib/netstandard2.0/MediatR.xml",
         "lib/netstandard2.1/MediatR.dll",
         "lib/netstandard2.1/MediatR.xml",
-        "mediatr.9.0.0.nupkg.sha512",
+        "mediatr.10.0.1.nupkg.sha512",
         "mediatr.nuspec"
+      ]
+    },
+    "MediatR.Contracts/1.0.1": {
+      "sha512": "NsRvOxthhkYml4DcBMyJsmym8C4MchioH7wxKVPEg7plFj9Euh/i4IcmZ3Gvgx6+K8obeuhPeJdoBl56wnuo3A==",
+      "type": "package",
+      "path": "mediatr.contracts/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "gradient_128x128.png",
+        "lib/net461/MediatR.Contracts.dll",
+        "lib/net461/MediatR.Contracts.xml",
+        "lib/netstandard2.0/MediatR.Contracts.dll",
+        "lib/netstandard2.0/MediatR.Contracts.xml",
+        "mediatr.contracts.1.0.1.nupkg.sha512",
+        "mediatr.contracts.nuspec"
       ]
     },
     "System.Diagnostics.DiagnosticSource/4.7.1": {
@@ -228,11 +256,11 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Ardalis.GuardClauses >= 3.3.0",
+      "Ardalis.GuardClauses >= 4.0.0",
       "Ardalis.Result >= 3.1.2",
-      "Ardalis.Specification >= 5.2.0",
+      "Ardalis.Specification >= 6.0.1",
       "Autofac >= 6.3.0",
-      "MediatR >= 9.0.0",
+      "MediatR >= 10.0.1",
       "Tastease.SharedKernel >= 1.0.0"
     ]
   },
@@ -242,11 +270,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tyran\\Source\\Repos\\Tastease\\Tastease\\src\\Tastease.Core\\Tastease.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Tyran\\source\\repos\\Tastease\\Tastease\\src\\Tastease.Core\\Tastease.Core.csproj",
       "projectName": "Tastease.Core",
-      "projectPath": "C:\\Users\\Tyran\\Source\\Repos\\Tastease\\Tastease\\src\\Tastease.Core\\Tastease.Core.csproj",
+      "projectPath": "C:\\Users\\Tyran\\source\\repos\\Tastease\\Tastease\\src\\Tastease.Core\\Tastease.Core.csproj",
       "packagesPath": "C:\\Users\\Tyran\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tyran\\Source\\Repos\\Tastease\\Tastease\\src\\Tastease.Core\\obj\\",
+      "outputPath": "C:\\Users\\Tyran\\source\\repos\\Tastease\\Tastease\\src\\Tastease.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Tyran\\source\\repos\\Tastease\\Tastease\\NuGet.Config",
@@ -264,8 +292,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Tyran\\Source\\Repos\\Tastease\\Tastease\\src\\Tastease.SharedKernel\\Tastease.SharedKernel.csproj": {
-              "projectPath": "C:\\Users\\Tyran\\Source\\Repos\\Tastease\\Tastease\\src\\Tastease.SharedKernel\\Tastease.SharedKernel.csproj"
+            "C:\\Users\\Tyran\\source\\repos\\Tastease\\Tastease\\src\\Tastease.SharedKernel\\Tastease.SharedKernel.csproj": {
+              "projectPath": "C:\\Users\\Tyran\\source\\repos\\Tastease\\Tastease\\src\\Tastease.SharedKernel\\Tastease.SharedKernel.csproj"
             }
           }
         }
@@ -282,7 +310,7 @@
         "dependencies": {
           "Ardalis.GuardClauses": {
             "target": "Package",
-            "version": "[3.3.0, )"
+            "version": "[4.0.0, )"
           },
           "Ardalis.Result": {
             "target": "Package",
@@ -290,7 +318,7 @@
           },
           "Ardalis.Specification": {
             "target": "Package",
-            "version": "[5.2.0, )"
+            "version": "[6.0.1, )"
           },
           "Autofac": {
             "target": "Package",
@@ -298,7 +326,7 @@
           },
           "MediatR": {
             "target": "Package",
-            "version": "[9.0.0, )"
+            "version": "[10.0.1, )"
           }
         },
         "imports": [

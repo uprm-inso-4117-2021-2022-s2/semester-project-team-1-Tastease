@@ -1,6 +1,5 @@
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Core\bin\Debug\net6.0\Tastease.Core.deps.json
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Core\bin\Debug\net6.0\Tastease.Core.dll
-C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Core\bin\Debug\net6.0\ref\Tastease.Core.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Core\bin\Debug\net6.0\Tastease.Core.pdb
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Core\bin\Debug\net6.0\Tastease.SharedKernel.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Core\bin\Debug\net6.0\Tastease.SharedKernel.pdb
@@ -13,3 +12,4 @@ C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Core\obj\Debug\net6.0
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Core\obj\Debug\net6.0\Tastease.Core.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Core\obj\Debug\net6.0\ref\Tastease.Core.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Core\obj\Debug\net6.0\Tastease.Core.pdb
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Core\obj\Debug\net6.0\refint\Tastease.Core.dll

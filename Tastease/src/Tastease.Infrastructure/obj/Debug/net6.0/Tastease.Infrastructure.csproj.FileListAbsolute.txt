@@ -1,7 +1,6 @@
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Infrastructure\bin\Debug\net6.0\Tastease.Infrastructure.deps.json
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Infrastructure\bin\Debug\net6.0\Tastease.Infrastructure.runtimeconfig.json
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Infrastructure\bin\Debug\net6.0\Tastease.Infrastructure.dll
-C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Infrastructure\bin\Debug\net6.0\ref\Tastease.Infrastructure.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Infrastructure\bin\Debug\net6.0\Tastease.Infrastructure.pdb
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Infrastructure\bin\Debug\net6.0\Tastease.Core.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Infrastructure\bin\Debug\net6.0\Tastease.SharedKernel.dll
@@ -17,3 +16,4 @@ C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Infrastructure\obj\De
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Infrastructure\obj\Debug\net6.0\ref\Tastease.Infrastructure.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Infrastructure\obj\Debug\net6.0\Tastease.Infrastructure.pdb
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Infrastructure\obj\Debug\net6.0\Tastease.Infrastructure.genruntimeconfig.cache
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Infrastructure\obj\Debug\net6.0\refint\Tastease.Infrastructure.dll

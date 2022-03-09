@@ -4,7 +4,6 @@ C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\Tastease.Web.deps.json
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\Tastease.Web.runtimeconfig.json
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\Tastease.Web.dll
-C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\ref\Tastease.Web.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\Tastease.Web.pdb
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Antiforgery.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
@@ -22,8 +21,6 @@ C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Connections.Abstractions.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\refs\Microsoft.AspNetCore.CookiePolicy.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Cors.dll
-C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Cryptography.Internal.dll
-C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\refs\Microsoft.AspNetCore.DataProtection.Abstractions.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\refs\Microsoft.AspNetCore.DataProtection.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\refs\Microsoft.AspNetCore.DataProtection.Extensions.dll
@@ -107,14 +104,11 @@ C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\refs\Microsoft.Extensions.Features.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\refs\Microsoft.Extensions.FileProviders.Abstractions.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\refs\Microsoft.Extensions.FileProviders.Composite.dll
-C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\refs\Microsoft.Extensions.FileProviders.Embedded.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\refs\Microsoft.Extensions.FileProviders.Physical.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\refs\Microsoft.Extensions.FileSystemGlobbing.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\refs\Microsoft.Extensions.Hosting.Abstractions.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\refs\Microsoft.Extensions.Hosting.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\refs\Microsoft.Extensions.Http.dll
-C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\refs\Microsoft.Extensions.Identity.Core.dll
-C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\refs\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\refs\Microsoft.Extensions.Localization.Abstractions.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\refs\Microsoft.Extensions.Localization.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\refs\Microsoft.Extensions.Logging.Abstractions.dll
@@ -313,10 +307,6 @@ C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\Microsoft.Build.dll
-C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\Microsoft.Build.Framework.dll
-C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\Microsoft.Build.Tasks.Core.dll
-C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\Microsoft.Build.Utilities.Core.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\Microsoft.CodeAnalysis.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -387,7 +377,6 @@ C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\System.CodeDom.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\System.Composition.AttributedModel.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\System.Composition.Convention.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\System.Composition.Hosting.dll
@@ -396,7 +385,6 @@ C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\System.Drawing.Common.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\System.Resources.Extensions.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\System.Runtime.Caching.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\System.Security.Permissions.dll
@@ -626,3 +614,15 @@ C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\obj\Debug\net6.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\obj\Debug\net6.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
 C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\obj\Debug\net6.0\scopedcss\projectbundle\Tastease.Web.bundle.scp.css
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Web\obj\Debug\net6.0\refint\Tastease.Web.dll
+C:\Users\Tyran\source\repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\MediatR.Contracts.dll
+C:\Users\Tyran\source\repos\Tastease\Tastease\src\Tastease.Web\bin\Debug\net6.0\Microsoft.Build.Locator.dll
