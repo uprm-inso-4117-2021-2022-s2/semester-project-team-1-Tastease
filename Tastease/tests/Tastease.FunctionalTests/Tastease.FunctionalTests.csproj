@@ -8,8 +8,10 @@
   </PropertyGroup>
   
   <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="6.5.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
     <PackageReference Include="Microsoft.Playwright.NUnit" Version="1.18.0" />
+    <PackageReference Include="SpecFlow.xUnit" Version="3.9.52" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
       <PrivateAssets>all</PrivateAssets>
@@ -27,6 +29,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Tastease.UnitTests\Tastease.UnitTests.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\" />
+    <Folder Include="Hooks\" />
+    <Folder Include="StepDefinitions\" />
   </ItemGroup>
 
 </Project>
