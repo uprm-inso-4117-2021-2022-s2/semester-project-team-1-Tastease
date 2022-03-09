@@ -1,0 +1,14 @@
+﻿using Ardalis.Specification;
+using Tastease.Core.ProjectAggregate;
+
+namespace Tastease.Core.ProjectAggregate.Specifications;
+
+public class ProjectByIdWithItemsSpec : Specification<Project>, ISingleResultSpecification
+{
+  public ProjectByIdWithItemsSpec(int projectId)
+  {
+    Query
+        .Where(project => project.Id == projectId)
+        .Include(project => project.Items);
+  }
+}
