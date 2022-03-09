@@ -272,7 +272,8 @@ __pycache__/
 # Cake - Uncomment if you are using it
 # tools/
 
-.sln
+.slnx.sqlite
 .dtbcache.v2
+.suo
 
 # End of https://www.toptal.com/developers/gitignore/api/aspnetcore
