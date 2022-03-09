@@ -1,0 +1,12 @@
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.SharedKernel\bin\Debug\net6.0\Tastease.SharedKernel.deps.json
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.SharedKernel\bin\Debug\net6.0\Tastease.SharedKernel.dll
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.SharedKernel\bin\Debug\net6.0\Tastease.SharedKernel.pdb
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.SharedKernel\obj\Debug\net6.0\Tastease.SharedKernel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.SharedKernel\obj\Debug\net6.0\Tastease.SharedKernel.AssemblyInfoInputs.cache
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.SharedKernel\obj\Debug\net6.0\Tastease.SharedKernel.AssemblyInfo.cs
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.SharedKernel\obj\Debug\net6.0\Tastease.SharedKernel.csproj.CoreCompileInputs.cache
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.SharedKernel\obj\Debug\net6.0\Tastease.SharedKernel.dll
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.SharedKernel\obj\Debug\net6.0\ref\Tastease.SharedKernel.dll
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.SharedKernel\obj\Debug\net6.0\Tastease.SharedKernel.pdb
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.SharedKernel\obj\Debug\net6.0\Tastease.SharedKernel.csproj.AssemblyReference.cache
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.SharedKernel\obj\Debug\net6.0\refint\Tastease.SharedKernel.dll

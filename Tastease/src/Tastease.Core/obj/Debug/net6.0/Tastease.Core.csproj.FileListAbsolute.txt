@@ -1,0 +1,15 @@
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Core\bin\Debug\net6.0\Tastease.Core.deps.json
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Core\bin\Debug\net6.0\Tastease.Core.dll
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Core\bin\Debug\net6.0\Tastease.Core.pdb
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Core\bin\Debug\net6.0\Tastease.SharedKernel.dll
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Core\bin\Debug\net6.0\Tastease.SharedKernel.pdb
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Core\obj\Debug\net6.0\Tastease.Core.csproj.AssemblyReference.cache
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Core\obj\Debug\net6.0\Tastease.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Core\obj\Debug\net6.0\Tastease.Core.AssemblyInfoInputs.cache
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Core\obj\Debug\net6.0\Tastease.Core.AssemblyInfo.cs
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Core\obj\Debug\net6.0\Tastease.Core.csproj.CoreCompileInputs.cache
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Core\obj\Debug\net6.0\Tastease.Core.csproj.CopyComplete
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Core\obj\Debug\net6.0\Tastease.Core.dll
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Core\obj\Debug\net6.0\ref\Tastease.Core.dll
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Core\obj\Debug\net6.0\Tastease.Core.pdb
+C:\Users\Tyran\Source\Repos\Tastease\Tastease\src\Tastease.Core\obj\Debug\net6.0\refint\Tastease.Core.dll

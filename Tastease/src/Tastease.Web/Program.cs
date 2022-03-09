@@ -7,6 +7,7 @@ using Tastease.Infrastructure.Data;
 using Tastease.Web;
 using Microsoft.OpenApi.Models;
 using Radzen;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,9 +20,9 @@ builder.Services.Configure<CookiePolicyOptions>(options =>
 });
 
 string connectionString = builder.Configuration.GetConnectionString("SqliteConnection");  //Configuration.GetConnectionString("DefaultConnection");
-
+string tasteaseConnectionString = builder.Configuration.GetConnectionString("TasteaseConnection");
 builder.Services.AddDbContext(connectionString);
-
+builder.Services.AddTasteaseDbContext(tasteaseConnectionString);
 
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
@@ -57,6 +58,7 @@ if (app.Environment.IsDevelopment())
 {
   app.UseDeveloperExceptionPage();
   app.UseShowAllServicesMiddleware();
+  //app.UseMigrationsEndPoint();
 }
 else
 {
@@ -65,11 +67,22 @@ else
 }
 app.UseRouting();
 
+app.UseAuthentication();
+app.UseAuthorization();
+app.UseEndpoints(endpoints => 
+{
+  endpoints.MapControllers();
+  endpoints.MapBlazorHub();
+  endpoints.MapFallbackToPage("/_Host");
+  
+});
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseCookiePolicy();
-app.MapBlazorHub();
-app.MapFallbackToPage("/_Host");
+//app.MapControllers();
+//app.MapBlazorHub();
+//app.MapFallbackToPage("/_Host");
 
 // Seed Database
 using (var scope = app.Services.CreateScope())
@@ -78,6 +91,9 @@ using (var scope = app.Services.CreateScope())
 
   try
   {
+    var tasteaseContext = services.GetRequiredService<ApplicationDbContext>();
+    //                    tasteaseContext.Database.Migrate();
+    tasteaseContext.Database.EnsureCreated();
     var context = services.GetRequiredService<AppDbContext>();
     //                    context.Database.Migrate();
     context.Database.EnsureCreated();

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "6z0flkOLOJD+F1tPrcm+UfeEUvObAY8IowTz9xsMqa4vx0v+p5NG+OOjsVB58b3xghEs4TOi9w5U9vJ55lWa6w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Tyran\\source\\repos\\Tastease\\Tastease\\src\\Tastease.SharedKernel\\Tastease.SharedKernel.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Tyran\\.nuget\\packages\\ardalis.specification\\6.0.1\\ardalis.specification.6.0.1.nupkg.sha512",
+    "C:\\Users\\Tyran\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
+    "C:\\Users\\Tyran\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -4,6 +4,16 @@ namespace Tastease.UnitTests;
 
 public class NoOpMediator : IMediator
 {
+  public IAsyncEnumerable<TResponse> CreateStream<TResponse>(IStreamRequest<TResponse> request, CancellationToken cancellationToken = default)
+  {
+    throw new NotImplementedException();
+  }
+
+  public IAsyncEnumerable<object?> CreateStream(object request, CancellationToken cancellationToken = default)
+  {
+    throw new NotImplementedException();
+  }
+
   public Task Publish(object notification, CancellationToken cancellationToken = default)
   {
     return Task.CompletedTask;
