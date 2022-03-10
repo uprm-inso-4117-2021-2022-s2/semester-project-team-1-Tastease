@@ -1,4 +1,4 @@
-﻿
+
 # Created by https://www.toptal.com/developers/gitignore/api/aspnetcore
 # Edit at https://www.toptal.com/developers/gitignore?templates=aspnetcore
 
@@ -272,7 +272,12 @@ __pycache__/
 # Cake - Uncomment if you are using it
 # tools/
 
-.sln
+.slnx.sqlite
 .dtbcache.v2
+/.vs/semester-project-team-1-Tastease/v17/.suo
 
 # End of https://www.toptal.com/developers/gitignore/api/aspnetcore
+*.dll
+.vs/slnx.sqlite
+*.sqlite
+Tastease.Web\appsettings.json
