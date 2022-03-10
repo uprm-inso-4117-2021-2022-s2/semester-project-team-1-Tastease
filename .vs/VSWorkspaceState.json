@@ -1,10 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\Tastease",
-    "\\Tastease\\src",
-    "\\Tastease\\src\\Tastease.Infrastructure"
+    ""
   ],
-  "SelectedNode": "\\Tastease\\src\\Tastease.Infrastructure\\EmailSender.cs",
+  "SelectedNode": "\\Tastease.sln",
   "PreviewInSolutionExplorer": false
 }
