@@ -89,11 +89,9 @@ using (var scope = app.Services.CreateScope())
   try
   {
     var tasteaseAuthenticationContext = services.GetRequiredService<AuthenticationDbContext>();
-    var tasteaseCoreContext = services.GetRequiredService<CoreDbContext>();
-    //                    tasteaseContext.Database.Migrate();
-    //                    tasteaseCoreContext.Database.Migrate();
-    tasteaseAuthenticationContext.Database.EnsureCreated();
-    tasteaseCoreContext.Database.EnsureCreated();
+    //var tasteaseCoreContext = services.GetRequiredService<CoreDbContext>();
+    tasteaseAuthenticationContext.Database.Migrate();
+    //tasteaseCoreContext.Database.Migrate();
     SeedData.Initialize(services);
   }
   catch (Exception ex)
