@@ -13,10 +13,17 @@
     <PackageReference Include="Ardalis.Specification" Version="6.0.1" />
     <PackageReference Include="Autofac" Version="6.3.0" />
     <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="StronglyTypedId" Version="0.2.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Tastease.SharedKernel\Tastease.SharedKernel.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="RecipeAggregate\PageModels\" />
+    <Folder Include="RecipeAggregate\Specifications\" />
   </ItemGroup>
 
 </Project>

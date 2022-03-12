@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using Autofac;
 using Tastease.Core.Interfaces;
-using Tastease.Core.ProjectAggregate;
+using Tastease.Core.RecipeAggregate;
 using Tastease.Infrastructure.Data;
 using Tastease.SharedKernel.Interfaces;
 using MediatR;
@@ -18,7 +18,7 @@ public class DefaultInfrastructureModule : Module
   public DefaultInfrastructureModule(bool isDevelopment, Assembly? callingAssembly = null)
   {
     _isDevelopment = isDevelopment;
-    var coreAssembly = Assembly.GetAssembly(typeof(Project)); // TODO: Replace "Project" with any type from your Core project
+    var coreAssembly = Assembly.GetAssembly(typeof(Recipe)); // TODO: Replace "Project" with any type from your Core project
     var infrastructureAssembly = Assembly.GetAssembly(typeof(StartupSetup));
     if (coreAssembly != null)
     {
@@ -49,10 +49,6 @@ public class DefaultInfrastructureModule : Module
 
   private void RegisterCommonDependencies(ContainerBuilder builder)
   {
-    builder.RegisterGeneric(typeof(EfRepository<>))
-        .As(typeof(IRepository<>))
-        .As(typeof(IReadRepository<>))
-        .InstancePerLifetimeScope();
 
     builder
         .RegisterType<Mediator>()
@@ -80,9 +76,6 @@ public class DefaultInfrastructureModule : Module
       .AsClosedTypesOf(mediatrOpenType)
       .AsImplementedInterfaces();
     }
-
-    builder.RegisterType<EmailSender>().As<IEmailSender>()
-        .InstancePerLifetimeScope();
   }
 
   private void RegisterDevelopmentOnlyDependencies(ContainerBuilder builder)

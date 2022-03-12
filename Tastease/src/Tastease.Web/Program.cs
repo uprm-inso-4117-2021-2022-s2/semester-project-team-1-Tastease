@@ -8,6 +8,8 @@ using Tastease.Web;
 using Microsoft.OpenApi.Models;
 using Radzen;
 using Microsoft.EntityFrameworkCore;
+using Tastease.Infrastructure.Data.AuthenticationContext;
+using Tastease.Infrastructure.Data.CoreContext;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,10 +21,8 @@ builder.Services.Configure<CookiePolicyOptions>(options =>
   options.MinimumSameSitePolicy = SameSiteMode.None;
 });
 
-string connectionString = builder.Configuration.GetConnectionString("SqliteConnection");  //Configuration.GetConnectionString("DefaultConnection");
-string tasteaseConnectionString = builder.Configuration.GetConnectionString("TasteaseConnection");
-builder.Services.AddDbContext(connectionString);
-builder.Services.AddTasteaseDbContext(tasteaseConnectionString);
+builder.Services.AddAuthenticationDbContexts(builder.Configuration.GetConnectionString("TasteaseAuthenticationConnection"));
+//builder.Services.AddAuthenticationDbContexts(builder.Configuration.GetConnectionString("TasteaseCoreConnection"));
 
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
@@ -80,9 +80,6 @@ app.UseEndpoints(endpoints =>
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseCookiePolicy();
-//app.MapControllers();
-//app.MapBlazorHub();
-//app.MapFallbackToPage("/_Host");
 
 // Seed Database
 using (var scope = app.Services.CreateScope())
@@ -91,12 +88,12 @@ using (var scope = app.Services.CreateScope())
 
   try
   {
-    var tasteaseContext = services.GetRequiredService<ApplicationDbContext>();
+    var tasteaseAuthenticationContext = services.GetRequiredService<AuthenticationDbContext>();
+    var tasteaseCoreContext = services.GetRequiredService<CoreDbContext>();
     //                    tasteaseContext.Database.Migrate();
-    tasteaseContext.Database.EnsureCreated();
-    var context = services.GetRequiredService<AppDbContext>();
-    //                    context.Database.Migrate();
-    context.Database.EnsureCreated();
+    //                    tasteaseCoreContext.Database.Migrate();
+    tasteaseAuthenticationContext.Database.EnsureCreated();
+    tasteaseCoreContext.Database.EnsureCreated();
     SeedData.Initialize(services);
   }
   catch (Exception ex)

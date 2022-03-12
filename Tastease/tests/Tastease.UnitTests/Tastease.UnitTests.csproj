@@ -16,6 +16,8 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
     <PackageReference Include="Microsoft.Playwright" Version="1.19.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="StronglyTypedId" Version="0.2.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -40,7 +42,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Core\Handlers\" />
     <Folder Include="Core\Services\" />
+    <Folder Include="Core\Specifications\" />
   </ItemGroup>
 
 </Project>
