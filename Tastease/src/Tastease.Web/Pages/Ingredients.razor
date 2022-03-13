@@ -2,7 +2,7 @@
 @using Tastease.Core.Literals
 
 @inject IIngredientService ingredientService
-
+@inject ILiteralService literalService
 
 <RadzenTemplateForm Data="@ingredient" Submit="@((Ingredient args) => { Submit(args); })">
     <RadzenDropDown AllowClear="true" AllowFiltering="true" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" Data=@types @bind-Value=@ingredient.Type Class="w-100" />
@@ -16,7 +16,7 @@
     protected override void OnInitialized()
     {
         ingredient = new();
-        types = Enum.GetValues<IngredientType>();
+        types = literalService.GetIngredientTypes();
     }
     async Task Submit(Ingredient ingredient)
     {

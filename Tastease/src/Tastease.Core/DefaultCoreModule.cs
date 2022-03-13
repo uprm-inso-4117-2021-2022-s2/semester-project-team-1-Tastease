@@ -24,6 +24,8 @@ public class DefaultCoreModule : Module
     builder.RegisterType<IngredientValidator>()
         .As<IValidator<Ingredient>>()
         .InstancePerLifetimeScope();
+    builder.RegisterType<LiteralService>()
+        .As<ILiteralService>().InstancePerLifetimeScope(); 
     builder.RegisterType<NutritionalPropertyValidator>()
         .As<IValidator<NutritionalProperty>>()
         .InstancePerLifetimeScope();
