@@ -11,7 +11,7 @@ public class InstructionConfiguration : IEntityTypeConfiguration<InstructionTabl
     builder.HasIndex(x => x.Guid)
       .IsUnique();
     builder.Property(x => x.Adjustments).HasJsonConversion();
-    builder.HasOne(x => x.MeasuredIngredients);
+    builder.HasMany(x => x.MeasuredIngredients);
     builder.HasOne(x => x.Appliance);
   }
 }

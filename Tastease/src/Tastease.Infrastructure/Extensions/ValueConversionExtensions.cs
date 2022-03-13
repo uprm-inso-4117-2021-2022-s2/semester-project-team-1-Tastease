@@ -30,7 +30,7 @@ public static class ValueConversionExtensions
     propertyBuilder.HasConversion(converter);
     propertyBuilder.Metadata.SetValueConverter(converter);
     propertyBuilder.Metadata.SetValueComparer(comparer);
-    propertyBuilder.HasColumnType("jsonb");
+    propertyBuilder.HasColumnType("nvarchar(max)");
 
     return propertyBuilder;
   }

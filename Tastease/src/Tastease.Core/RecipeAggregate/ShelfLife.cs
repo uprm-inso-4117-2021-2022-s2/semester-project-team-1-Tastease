@@ -5,5 +5,5 @@ namespace Tastease.Core.RecipeAggregate;
 public class ShelfLife : ValueObject
 {
   public State State { get; init; }
-  public ICollection<TimeOnly> Times { get; init; }
+  public IEnumerable<TimeOnly> Times { get; init; }
 }

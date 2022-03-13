@@ -24,7 +24,7 @@ public static class StartupSetup
     services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
 
   }
-  public static void AddTasteaseCoreDbContexts(this IServiceCollection services, string connectionString)
+  public static void AddCoreDbContexts(this IServiceCollection services, string connectionString)
   {
     services.AddDbContext<CoreDbContext>(options =>
       options.UseSqlServer(connectionString));// will be created in web project root

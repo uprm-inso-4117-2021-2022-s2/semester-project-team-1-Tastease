@@ -15,21 +15,34 @@ public class RecipeTable
   {
     Ingredients = new HashSet<IngredientTable>();
     Appliances = new HashSet<ApplianceTable>();
-    Courses = new HashSet<Course>();
+    Values = new HashSet<RecipeValueTable>();
     Instructions = new HashSet<InstructionTable>();
   }
   public int Id { get; set; }
   public string Guid { get; set; }
-  public TimeOnly PrepTime { get; set; }
-  public TimeOnly CookTime { get; set; }
+  public string PrepTime { get; set; }
+  public string CookTime { get; set; }
   public string Name { get; set; }
   public string Description { get; set; }
   public int Servings { get; set; }
   public ICollection<IngredientTable> Ingredients { get; set; }
   public ICollection<ApplianceTable> Appliances { get; }
-  public ICollection<Course> Courses { get; set; }
+  public ICollection<RecipeValueTable> Values { get; set; }
   public ExperienceLevel ExecutionDifficulty { get; set; }
   public ICollection<InstructionTable> Instructions { get; set; }
   public CuisineTable Cuisine { get; set; }
   public CookTable Cook { get; set; }
+}
+public enum RecipeType 
+{
+    Course
+}
+public class RecipeValueTable 
+{
+    public int Id { get; set; }
+    public string Nameof { get; set; }
+    public RecipeType Type { get; set; }
+    public string Value { get; set; }
+    public RecipeTable Recipe { get; set; }
+    public int RecipeId { get; set; }
 }

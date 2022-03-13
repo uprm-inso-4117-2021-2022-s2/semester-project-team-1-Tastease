@@ -18,7 +18,7 @@ public class DefaultInfrastructureModule : Module
   public DefaultInfrastructureModule(bool isDevelopment, Assembly? callingAssembly = null)
   {
     _isDevelopment = isDevelopment;
-    var coreAssembly = Assembly.GetAssembly(typeof(Recipe)); // TODO: Replace "Project" with any type from your Core project
+    var coreAssembly = Assembly.GetAssembly(typeof(Recipe));
     var infrastructureAssembly = Assembly.GetAssembly(typeof(StartupSetup));
     if (coreAssembly != null)
     {
@@ -49,11 +49,14 @@ public class DefaultInfrastructureModule : Module
 
   private void RegisterCommonDependencies(ContainerBuilder builder)
   {
-
-    builder
-        .RegisterType<Mediator>()
-        .As<IMediator>()
-        .InstancePerLifetimeScope();
+        builder.RegisterGeneric(typeof(EfRepository<>))
+            .As(typeof(IRepository<>))
+            .As(typeof(IReadRepository<>))
+            .InstancePerLifetimeScope();
+        builder
+            .RegisterType<Mediator>()
+            .As<IMediator>()
+            .InstancePerLifetimeScope();
 
     builder.Register<ServiceFactory>(context =>
     {

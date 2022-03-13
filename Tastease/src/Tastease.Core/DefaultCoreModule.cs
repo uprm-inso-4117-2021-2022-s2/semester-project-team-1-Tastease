@@ -1,6 +1,9 @@
 ﻿using Autofac;
 using Tastease.Core.Interfaces;
+using Tastease.Core.RecipeAggregate.Validators;
 using Tastease.Core.Services;
+using FluentValidation;
+using Tastease.Core.RecipeAggregate;
 
 namespace Tastease.Core;
 
@@ -18,5 +21,14 @@ public class DefaultCoreModule : Module
         .As<IPantryService>().InstancePerLifetimeScope();
     builder.RegisterType<RecipeService>()
         .As<IRecipeService>().InstancePerLifetimeScope();
-  }
+    builder.RegisterType<IngredientValidator>()
+        .As<IValidator<Ingredient>>()
+        .InstancePerLifetimeScope();
+    builder.RegisterType<NutritionalPropertyValidator>()
+        .As<IValidator<NutritionalProperty>>()
+        .InstancePerLifetimeScope();
+    builder.RegisterType<ShelfLifeValidator>()
+        .As<IValidator<ShelfLife>>()
+        .InstancePerLifetimeScope();
+    }
 }

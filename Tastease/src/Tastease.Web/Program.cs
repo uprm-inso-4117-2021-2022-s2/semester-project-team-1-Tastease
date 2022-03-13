@@ -22,7 +22,7 @@ builder.Services.Configure<CookiePolicyOptions>(options =>
 });
 
 builder.Services.AddAuthenticationDbContexts(builder.Configuration.GetConnectionString("TasteaseAuthenticationConnection"));
-//builder.Services.AddAuthenticationDbContexts(builder.Configuration.GetConnectionString("TasteaseCoreConnection"));
+builder.Services.AddCoreDbContexts(builder.Configuration.GetConnectionString("TasteaseCoreConnection"));
 
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
@@ -89,9 +89,9 @@ using (var scope = app.Services.CreateScope())
   try
   {
     var tasteaseAuthenticationContext = services.GetRequiredService<AuthenticationDbContext>();
-    //var tasteaseCoreContext = services.GetRequiredService<CoreDbContext>();
+    var tasteaseCoreContext = services.GetRequiredService<CoreDbContext>();
     tasteaseAuthenticationContext.Database.Migrate();
-    //tasteaseCoreContext.Database.Migrate();
+    tasteaseCoreContext.Database.Migrate();
     SeedData.Initialize(services);
   }
   catch (Exception ex)

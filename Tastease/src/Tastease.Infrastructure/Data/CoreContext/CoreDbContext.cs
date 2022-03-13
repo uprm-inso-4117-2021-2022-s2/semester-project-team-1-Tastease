@@ -9,7 +9,7 @@ using Tastease.Core.RecipeAggregate.Tables;
 using Tastease.Infrastructure.Data.CoreContext.Config;
 
 namespace Tastease.Infrastructure.Data.CoreContext;
-public class CoreDbContext : DbContext
+public partial class CoreDbContext : DbContext
 {
   public CoreDbContext() : base() { }
   public CoreDbContext(DbContextOptions<CoreDbContext> options) : base(options) { }
@@ -43,7 +43,9 @@ public class CoreDbContext : DbContext
     modelBuilder.ApplyConfiguration(new MeasuredIngredientConfiguration());
     modelBuilder.ApplyConfiguration(new NutritionalPropertyConfiguration());
     modelBuilder.ApplyConfiguration(new PantryConfiguration());
-    modelBuilder.ApplyConfiguration(new RecipeConfiguration());
+    modelBuilder.ApplyConfiguration(new RecipeValueConfiguration());
+    modelBuilder.ApplyConfiguration(new RecipeConfiguration()); 
     modelBuilder.ApplyConfiguration(new ShelfLifeConfiguration());
-  }
+    modelBuilder.ApplyConfiguration(new ShelfLifeValueConfiguration());
+    }
 }

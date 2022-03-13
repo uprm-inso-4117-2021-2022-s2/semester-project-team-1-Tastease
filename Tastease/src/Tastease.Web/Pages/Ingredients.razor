@@ -1,0 +1,25 @@
+﻿@page "/ingredients"
+@using Tastease.Core.Literals
+
+@inject IIngredientService ingredientService
+
+
+<RadzenTemplateForm Data="@ingredient" Submit="@((Ingredient args) => { Submit(args); })">
+    <RadzenDropDown AllowClear="true" AllowFiltering="true" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" Data=@types @bind-Value=@ingredient.Type Class="w-100" />
+    <RadzenButton ButtonType="ButtonType.Submit" Icon="save" Text="Save" />    
+</RadzenTemplateForm>
+
+
+@code {
+    Ingredient ingredient { get; set; }
+    IEnumerable<IngredientType> types { get; set; }
+    protected override void OnInitialized()
+    {
+        ingredient = new();
+        types = Enum.GetValues<IngredientType>();
+    }
+    async Task Submit(Ingredient ingredient)
+    {
+        var test = await ingredientService.Add(ingredient);
+    }
+}

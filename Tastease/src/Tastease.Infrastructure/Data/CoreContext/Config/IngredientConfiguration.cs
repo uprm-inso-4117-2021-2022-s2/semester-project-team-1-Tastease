@@ -15,8 +15,15 @@ public class IngredientConfiguration : IEntityTypeConfiguration<IngredientTable>
       .IsUnique();
     builder.HasIndex(x => x.Name)
       .IsUnique();
+
     builder.Property(x => x.Type)
       .HasConversion(new EnumToStringConverter<IngredientType>());
+
+    builder.HasMany(x => x.MeasuredIngredients)
+        .WithOne(x => x.Ingredient)
+        .HasForeignKey(x => x.IngredientId)
+        .OnDelete(DeleteBehavior.Cascade);
+
     builder.HasMany(x => x.NutritionalValues);
     builder.HasMany(x => x.ShelfLives);
   }
