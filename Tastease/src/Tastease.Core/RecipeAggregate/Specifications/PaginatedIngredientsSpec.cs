@@ -4,17 +4,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Tastease.Core.RecipeAggregate.RequestModels;
 using Tastease.Core.RecipeAggregate.Tables;
 
 namespace Tastease.Core.RecipeAggregate.Specifications
 {
     public class PaginatedIngredientsSpec : Specification<IngredientTable>
     {
-        public PaginatedIngredientsSpec(int page = 0, int size= 10) 
+        public PaginatedIngredientsSpec(BasePaginationRequest pagination) 
         {
             Query.OrderBy(ingredient => ingredient.Id)
-                .Skip(page)
-                .Take(size);
+                .Skip(pagination.Page)
+                .Take(pagination.Size);
         }
 
     }

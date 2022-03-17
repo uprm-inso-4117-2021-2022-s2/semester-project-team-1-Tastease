@@ -5,11 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Tastease.Core.RecipeAggregate;
+using Tastease.Core.RecipeAggregate.RequestModels;
 
 namespace Tastease.Core.Interfaces;
 public interface IIngredientService
 {
-    public Task<Result<IEnumerable<Ingredient>>> GetAll(int page = 0, int size = 10);
+    public Task<Result<IEnumerable<Ingredient>>> GetAll(BasePaginationRequest pagination);
     public Task<Result<Ingredient>> Add(Ingredient ingredient);
     public Result<Ingredient> Delete(Ingredient ingredient);
 

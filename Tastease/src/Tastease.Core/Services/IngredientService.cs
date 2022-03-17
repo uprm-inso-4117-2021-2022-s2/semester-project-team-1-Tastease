@@ -10,6 +10,7 @@ using Tastease.Core.Interfaces;
 using Tastease.Core.RecipeAggregate;
 using Tastease.Core.RecipeAggregate.Extensions;
 using Tastease.Core.RecipeAggregate.Extenstions;
+using Tastease.Core.RecipeAggregate.RequestModels;
 using Tastease.Core.RecipeAggregate.Specifications;
 using Tastease.Core.RecipeAggregate.Tables;
 using Tastease.SharedKernel.Interfaces;
@@ -19,11 +20,15 @@ public class IngredientService : IIngredientService
 {
     private readonly IRepository<IngredientTable> _repository;
     private readonly IValidator<Ingredient> _validator;
+    private readonly IValidator<BasePaginationRequest> _requestValidator;
 
-    public IngredientService(IRepository<IngredientTable> repository, IValidator<Ingredient> validator) 
+    public IngredientService(IRepository<IngredientTable> repository,
+        IValidator<Ingredient> validator,
+        IValidator<BasePaginationRequest> requestValidator) 
     {
         _repository = repository;
         _validator = validator;
+        _requestValidator = requestValidator;
     }
 
     public async Task<Result<Ingredient>> Add(Ingredient ingredient)
@@ -36,11 +41,7 @@ public class IngredientService : IIngredientService
                     .Select(error => error.ToValidationError())
                     .ToList());
         }
-        var result =  await _repository.AddAsync(new IngredientTable 
-        {
-            Name = ingredient.Name,
-            Type = ingredient.Type,
-        });
+        var result =  await _repository.AddAsync(ingredient.ToIngredientTable());
         return Result<Ingredient>.Success(result.ToIngredient());
     }
 
@@ -49,27 +50,24 @@ public class IngredientService : IIngredientService
         throw new NotImplementedException();
     }
 
-    public async Task<Result<IEnumerable<Ingredient>>> GetAll(int page = 0, int size = 10)
+    public async Task<Result<IEnumerable<Ingredient>>> GetAll(BasePaginationRequest request)
     {
-        if(page < 0 || size < 0) 
+        var validationResult = _requestValidator.Validate(request);
+        if (!validationResult.IsValid)
         {
             return Result<IEnumerable<Ingredient>>
-                .Invalid(new List<ValidationError> 
-                {
-                    new ValidationError 
-                    {
-                        Severity = ValidationSeverity.Error,
-                        ErrorMessage = "",
-                        Identifier = nameof(page)
-                    } 
-                });
+                .Invalid(validationResult.Errors
+                    .Select(error => error.ToValidationError())
+                    .ToList());
         }
-        var query = new PaginatedIngredientsSpec(page, size);
+        var query = new PaginatedIngredientsSpec(request);
         var ingredients = await _repository.ListAsync(query);
         if(ingredients is null) { return Result<IEnumerable<Ingredient>>.NotFound(); }
-
         return Result<IEnumerable<Ingredient>>
             .Success(ingredients.Select(ingredient => ingredient.ToIngredient()));
 
     }
+
+
+
 }

@@ -12,5 +12,10 @@ public static class IngredientExtenstions
         ShelfLives = ingredient.ShelfLives
             .Select(shelfLife => shelfLife.ToShelfLife())
     };
+    public static IngredientTable ToIngredientTable(this Ingredient ingredient) => new IngredientTable
+    {
+        Name = ingredient.Name,
+        Type = ingredient.Type,
+    };
 }
 
