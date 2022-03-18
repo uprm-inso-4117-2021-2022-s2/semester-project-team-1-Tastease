@@ -4,6 +4,6 @@
 /// </summary>
 public enum IngredientType 
 {
-  Protein, Dariy, Fruits, Vegtables, Grains
+  Protein, Dariy, Fruits, Vegtables, Grains, Spice
 }
 

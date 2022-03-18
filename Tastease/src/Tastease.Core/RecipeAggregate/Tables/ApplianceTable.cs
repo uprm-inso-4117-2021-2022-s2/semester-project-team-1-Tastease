@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Tastease.SharedKernel;
+using Tastease.SharedKernel.Interfaces;
 
 namespace Tastease.Core.RecipeAggregate.Tables;
-public class ApplianceTable
+public class ApplianceTable : IAggregateRoot
 {
   public int Id { get; set; }
   public string Guid { get; set; }

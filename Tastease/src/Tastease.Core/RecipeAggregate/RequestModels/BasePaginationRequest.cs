@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Tastease.Core.RecipeAggregate.Validators;
 
 namespace Tastease.Core.RecipeAggregate.RequestModels
 {
     public class BasePaginationRequest
     {
-        public int Page { get; set; } = 0;
-        public int Size { get; set; } = 10;
+        public int Page { get; init; } = 0;
+        public int Size { get; init; } = 10;
     }
 }
