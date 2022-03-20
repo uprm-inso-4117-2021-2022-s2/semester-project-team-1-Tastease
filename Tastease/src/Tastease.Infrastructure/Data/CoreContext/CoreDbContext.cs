@@ -46,6 +46,5 @@ public partial class CoreDbContext : DbContext
     modelBuilder.ApplyConfiguration(new RecipeValueConfiguration());
     modelBuilder.ApplyConfiguration(new RecipeConfiguration()); 
     modelBuilder.ApplyConfiguration(new ShelfLifeConfiguration());
-    modelBuilder.ApplyConfiguration(new ShelfLifeValueConfiguration());
     }
 }

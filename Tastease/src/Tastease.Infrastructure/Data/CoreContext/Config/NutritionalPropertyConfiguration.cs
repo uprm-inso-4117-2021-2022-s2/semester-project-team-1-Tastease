@@ -11,8 +11,6 @@ public class NutritionalPropertyConfiguration : IEntityTypeConfiguration<Nutriti
   public void Configure(EntityTypeBuilder<NutritionalPropertyTable> builder)
   {
     builder.HasKey(x => x.Id);
-    builder.HasIndex(x => x.Guid)
-      .IsUnique();
     builder.Property(x => x.Category)
       .HasConversion(new EnumToStringConverter<NutritionalCategory>());
   }

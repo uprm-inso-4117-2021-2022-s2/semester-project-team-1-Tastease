@@ -27,7 +27,7 @@ namespace Tastease.Core.RecipeAggregate.Validators
     {
         public ShelfLifeValidator()
         {
-            RuleFor(x => x.Times).NotEmpty().NotNull();
+            RuleFor(x => x.Time).NotNull().GreaterThan(TimeSpan.Zero);
         }
     }
 }

@@ -1,25 +1,183 @@
 ﻿@page "/ingredients"
 @using Tastease.Core.Literals
 
+
 @inject IIngredientService ingredientService
 @inject ILiteralService literalService
+@inject DialogService dialogService
+@inject NotificationService notificationService
+<h1>Ingredient Adding Page</h1>
+<RadzenCard>
+    <RadzenTemplateForm Data="@ingredient" Submit="@((IngredientPageModel args) => { Submit(args); })">
+        <div class="row">
+            <div class="col-lg-6">
+                <RadzenTextBox Placeholder="Name..." @bind-Value=@ingredient.Name Class="w-100" />
+            </div>
+            <div class="col-lg-6">
+                <RadzenDropDown Data=@types @bind-Value=@ingredient.Type Class="w-100" />
+            </div>
+        </div>
+        <h2>Shelf Lives</h2>
+        <div class="row">
+            <div class="col-lg-12">
+                <RadzenDataList WrapItems="true" AllowPaging="true" 
+                    Data="@ingredient.ShelfLives" TItem="ShelfLifePageModel"
+                    PageSize="5" PagerHorizontalAlign="HorizontalAlign.Justify" ShowPagingSummary="true">
+                    <Template Context="shelfLife">
+                        <RadzenCard Style="width: 100%; padding: 0; overflow: hidden;">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-3 p-3">@(shelfLife.State)</div>
+                                    <div class="col-lg-7 p-3">
+                                        <div class="row d-flex">
+                                            <div class="col-md-6 order-first order-lg-last col-lg-3 text-sm-left text-lg-right mb-3 mb-lg-0">
+                                                <RadzenBadge BadgeStyle="BadgeStyle.Secondary" Class="price-badge" Text=@($"{shelfLife.TimeAsString}") />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 p-3">
+                                       @* <RadzenButton Text="Order now" Class="w-100" /> TODO: Delete button*@
+                                    </div>
+                                </div>
+                            </div>
+                        </RadzenCard>
+                    </Template>
+                </RadzenDataList>
+            </div>
+        </div>
+        <h2>Nutritional Properties</h2>
+        <div class="row">
+            <div class="col-lg-12">
+                <RadzenDataList WrapItems="true" AllowPaging="true" 
+                    Data="@ingredient.NutritionalValues" TItem="NutritionalPropertyPageModel"
+                    PageSize="5" PagerHorizontalAlign="HorizontalAlign.Justify" ShowPagingSummary="true">
+                    <Template Context="nutritionalProperty">
+                        <RadzenCard Style="width: 100%; padding: 0; overflow: hidden;">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-3 p-3">@(nutritionalProperty.Category)</div>
+                                    <div class="col-lg-7 p-3">
+                                        <div class="row d-flex">
+                                            <div class="col-md-6 order-first order-lg-last col-lg-3 text-sm-left text-lg-right mb-3 mb-lg-0">
+                                                <RadzenBadge BadgeStyle="BadgeStyle.Secondary" Class="price-badge" Text=@($"{nutritionalProperty.Value}") />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 p-3">
+                                       @* <RadzenButton Text="Order now" Class="w-100" /> TODO: Delete button*@
+                                    </div>
+                                </div>
+                            </div>
+                        </RadzenCard>
+                    </Template>
+                </RadzenDataList>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <RadzenButton Text="Add Shelf life" ButtonStyle="ButtonStyle.Secondary" Disabled=ShelfLifeButtonDisabled Click=@OpenShelfLifePopup />
+            </div>
+            <div class="col-lg-4">
+                <RadzenButton Text="Add Nutritional Property" ButtonStyle="ButtonStyle.Secondary" Disabled=NutritionalPropertyButtonDisabled Click=@OpenNutritionalPropertyPopup />
+            </div>
+            <div class="col-lg-4">
+                <RadzenButton ButtonType="ButtonType.Submit" Icon="save" Text="Save" />
+            </div>
+        </div>
+        
+        
+        
+    </RadzenTemplateForm>
+</RadzenCard>
 
-<RadzenTemplateForm Data="@ingredient" Submit="@((Ingredient args) => { Submit(args); })">
-    <RadzenDropDown AllowClear="true" AllowFiltering="true" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" Data=@types @bind-Value=@ingredient.Type Class="w-100" />
-    <RadzenButton ButtonType="ButtonType.Submit" Icon="save" Text="Save" />    
-</RadzenTemplateForm>
 
 
 @code {
-    Ingredient ingredient { get; set; }
+    IngredientPageModel ingredient { get; set; }
     IEnumerable<IngredientType> types { get; set; }
+    IEnumerable<State> states { get; set; }
+    IEnumerable<NutritionalCategory> categories { get; set; }
+    dynamic? ativePopup { get; set; }
+    List<State> AlreadyUsedSates => ingredient.ShelfLives
+        .Where(shelfLife => shelfLife.State is not null)
+        .Select(shelfLife => shelfLife.State.Value)
+        .Distinct()
+        .ToList();
+    bool NutritionalPropertyButtonDisabled => AlreadyUsedCategories.Count == categories.Count();
+    bool ShelfLifeButtonDisabled => AlreadyUsedSates.Count == states.Count();
+    List<NutritionalCategory> AlreadyUsedCategories => ingredient.NutritionalValues
+        .Where(property => property.Category is not null)
+        .Select(property => property.Category.Value)
+        .Distinct()
+        .ToList();
     protected override void OnInitialized()
     {
         ingredient = new();
         types = literalService.GetIngredientTypes();
+        states = literalService.GetStates();
+        categories = literalService.GetNutritionalCategories();
     }
-    async Task Submit(Ingredient ingredient)
+    async Task Submit(IngredientPageModel ingredient)
     {
-        var test = await ingredientService.Add(ingredient);
+        var result = await ingredientService.Add(ingredient.ToAddIngredientRequest());
+        if(result.IsSuccess)
+        {
+            notificationService.Notify(new NotificationMessage
+            {
+                Severity = NotificationSeverity.Success,
+                Summary = $"succesfully added Ingredient to data base"
+            });
+            return;
+        }
+        notificationService.Notify(new NotificationMessage
+        {
+            Severity = NotificationSeverity.Error,
+            Detail = "an error has occured when attempting to save added Ingredient to data base",
+            Summary = $"{string.Join(", ", result.ValidationErrors.Select(error => error.ErrorMessage)) }"
+        });
     }
+    
+
+    public async Task OpenShelfLifePopup()
+    {
+
+        ativePopup = await dialogService.OpenAsync("Shelf Life", ds =>
+            @<div>
+                <ShelfLifePopup OnSubmit=AddShelfLife States=@states.Where(state => AlreadyUsedSates.Contains(state) is false)/>
+    </div>
+    , new DialogOptions { Draggable = true, Resizable = true });
+
+    }
+    public async Task OpenNutritionalPropertyPopup()
+    {
+        ativePopup = await dialogService.OpenAsync("Nutritional Property", ds =>
+            @<div>
+                <NutritionalPropertyPopup OnSubmit=AddNutritionalProperty Categories=@categories.Where(category => AlreadyUsedCategories.Contains(category) is false) />
+    </div>
+    , new DialogOptions { Draggable = true, Resizable = true });
+
+    }
+
+    public void AddNutritionalProperty(NutritionalPropertyPageModel nutritionalProperty)
+    {
+        ingredient.NutritionalValues.Add(nutritionalProperty);
+        notificationService.Notify(new NotificationMessage
+        {
+            Severity = NotificationSeverity.Success,
+            Summary = $"succesfully added shelf life"
+        });
+        dialogService.Close(ativePopup);      
+    }
+
+    public void AddShelfLife(ShelfLifePageModel shelfLife)
+    {
+        ingredient.ShelfLives.Add(shelfLife);
+        notificationService.Notify(new NotificationMessage
+        {
+            Severity = NotificationSeverity.Success,
+            Summary = $"succesfully added shelf life"
+        });
+        dialogService.Close(ativePopup);        
+    }
+
 }

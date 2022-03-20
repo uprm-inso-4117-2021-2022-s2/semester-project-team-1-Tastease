@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Tastease.Core.RecipeAggregate.Validators;
 
-namespace Tastease.Core.RecipeAggregate.RequestModels
+namespace Tastease.Core.RecipeAggregate.Requests
 {
     public class BasePaginationRequest
     {

@@ -24,9 +24,4 @@
     <ProjectReference Include="..\Tastease.SharedKernel\Tastease.SharedKernel.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="RecipeAggregate\Requests\" />
-    <Folder Include="RecipeAggregate\PageModels\" />
-  </ItemGroup>
-
 </Project>

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tastease.Core.RecipeAggregate.RequestModels;
+using Tastease.Core.RecipeAggregate.Requests;
 using Tastease.Core.RecipeAggregate.Validators;
 using FluentAssertions;
 using Xunit;

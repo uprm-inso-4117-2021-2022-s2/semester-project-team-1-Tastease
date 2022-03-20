@@ -8,7 +8,8 @@ using Tastease.SharedKernel;
 using Tastease.SharedKernel.Interfaces;
 
 namespace Tastease.Core.RecipeAggregate;
-
+[StronglyTypedId(jsonConverter: StronglyTypedIdJsonConverter.SystemTextJson)]
+public partial struct IngredientId { }
 public class Ingredient : ValueObject
 {
     public Ingredient() 
@@ -23,6 +24,7 @@ public class Ingredient : ValueObject
       Name = name;
       Type = type;
     }
+    public IngredientId Id { get; set; }
     public IEnumerable<ShelfLife> ShelfLives { get; set; }
     public string Name { get; set; }
     public IngredientType Type { get; set; }

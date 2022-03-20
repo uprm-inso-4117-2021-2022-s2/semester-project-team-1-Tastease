@@ -2,5 +2,5 @@
 
 public enum AuthenticatedRole
 {
-  Admin, Standard
+    Standard, Family, Cook, MasterChef, Administrator
 }

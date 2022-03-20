@@ -1,0 +1,35 @@
+﻿<div class="row">
+    <div class="col-lg-12">
+        <RadzenDropDown AllowClear="true" AllowFiltering="true" 
+            FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" 
+            Data=@Categories @bind-Value=@Property.Category Class="w-100" />
+        <RadzenMask Mask="**" CharacterPattern="[0-9]" Placeholder="24" Name="Value" @bind-Value=@Property.Value Style="width: 100%;" />
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-lg-12">
+        <RadzenButton ButtonStyle="ButtonStyle.Light" ButtonType="ButtonType.Submit"  Icon="save" Text="Save" Disabled=Disabled Click=@Submit/>
+    </div>
+</div>
+
+
+
+
+@code {
+    [Parameter, EditorRequired]
+    public IEnumerable<NutritionalCategory> Categories { get; set; }
+    [Parameter, EditorRequired]
+    public EventCallback<NutritionalPropertyPageModel> OnSubmit { get; set; }
+    bool Disabled => !int.TryParse(Property.Value, out int _);
+    NutritionalPropertyPageModel Property { get; set; }
+    async Task Submit()
+    {
+        await OnSubmit.InvokeAsync(Property);
+    }
+    protected override void OnInitialized()
+    {
+        Property = new();
+    }
+    
+}

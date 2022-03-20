@@ -4,7 +4,7 @@ using Tastease.Core.RecipeAggregate.Validators;
 using Tastease.Core.Services;
 using FluentValidation;
 using Tastease.Core.RecipeAggregate;
-using Tastease.Core.RecipeAggregate.RequestModels;
+using Tastease.Core.RecipeAggregate.Requests;
 
 namespace Tastease.Core;
 
@@ -41,6 +41,9 @@ public class DefaultCoreModule : Module
             .InstancePerLifetimeScope();
         builder.RegisterType<BasePaginationRequestValidator>()
             .As<IValidator<BasePaginationRequest>>()
+            .InstancePerLifetimeScope();
+        builder.RegisterType<AddIngredientRequestValidator>()
+            .As<IValidator<AddIngredientRequest>>()
             .InstancePerLifetimeScope();
     }
 }
