@@ -30,10 +30,12 @@
     <PackageReference Include="Ardalis.Result" Version="3.1.2" />
     <PackageReference Include="Ardalis.Result.AspNetCore" Version="3.1.2" />
     <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" PrivateAssets="all" Version="6.0.3" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" PrivateAssets="All" Version="6.0.2" />
-    <PackageReference Include="Radzen.Blazor" Version="3.16.3" />
+    <PackageReference Include="Radzen.Blazor" Version="3.17.3" />
     <PackageReference Include="StronglyTypedId" Version="0.2.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
     <PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />

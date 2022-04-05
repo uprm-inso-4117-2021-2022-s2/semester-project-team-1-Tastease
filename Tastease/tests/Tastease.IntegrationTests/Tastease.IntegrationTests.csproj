@@ -8,14 +8,16 @@
   </PropertyGroup>
   
   <ItemGroup>
-    <PackageReference Include="FluentAssertions" Version="6.5.1" />
+    <PackageReference Include="Bogus" Version="34.0.2" />
+    <PackageReference Include="FluentAssertions" Version="6.6.0" />
     <PackageReference Include="FluentValidation" Version="10.4.0" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="10.4.0" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="10.4.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
-    <PackageReference Include="Microsoft.Playwright" Version="1.20.1" />
+    <PackageReference Include="Microsoft.Playwright" Version="1.20.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-    <PackageReference Include="SpecFlow" Version="3.9.52" />
+    <PackageReference Include="SpecFlow" Version="3.9.58" />
+    <PackageReference Include="SpecFlow.xUnit" Version="3.9.58" />
     <PackageReference Include="StronglyTypedId" Version="0.2.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
       <PrivateAssets>all</PrivateAssets>
@@ -35,9 +37,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Features\Calculator.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </None>
     <None Update="xunit.runner.json">
 	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Drivers\" />
+    <Folder Include="Features\" />
+    <Folder Include="Support\" />
   </ItemGroup>
 
 </Project>

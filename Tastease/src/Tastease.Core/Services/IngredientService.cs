@@ -49,11 +49,17 @@ public class IngredientService : IIngredientService
         return Result<Ingredient>.Success(result.ToIngredient());
     }
 
-    public Result<Ingredient> Delete(Ingredient ingredient)
+    public async Task<Result<Ingredient>> Delete(IngredientId ingredientId)
+    {
+        var ingredientToDelete = await _repository.GetByIdAsync(ingredientId);
+        if(ingredientToDelete == null) { return Result<Ingredient>.NotFound(); }
+        await _repository.DeleteAsync(ingredientToDelete);
+        return Result<Ingredient>.Success(ingredientToDelete.ToIngredient());
+    }
+    public Task<Result<Ingredient>> GetById(IngredientId ingredientId)
     {
         throw new NotImplementedException();
     }
-
     public async Task<Result<IEnumerable<Ingredient>>> GetAll(BasePaginationRequest request)
     {
         var validationResult = _requestValidator.Validate(request);
@@ -72,6 +78,5 @@ public class IngredientService : IIngredientService
 
     }
 
-
-
+    
 }

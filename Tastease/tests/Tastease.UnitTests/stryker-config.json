@@ -1,0 +1,6 @@
+{
+  "stryker-config": {
+    "solution": "C:\\Users\\Tyran\\source\\repos\\uprm-inso-4117-2021-2022-s2\\semester-project-team-1-Tastease\\Tastease\\Tastease.sln",
+    "project": "Tastease.Core.csproj"
+  }
+}
