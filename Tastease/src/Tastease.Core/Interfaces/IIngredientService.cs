@@ -10,8 +10,9 @@ using Tastease.Core.RecipeAggregate.Requests;
 namespace Tastease.Core.Interfaces;
 public interface IIngredientService
 {
+    public Task<Result<Ingredient>> GetById(IngredientId ingredientId);
     public Task<Result<IEnumerable<Ingredient>>> GetAll(BasePaginationRequest pagination);
     public Task<Result<Ingredient>> Add(AddIngredientRequest ingredient);
-    public Result<Ingredient> Delete(Ingredient ingredient);
+    public Task<Result<Ingredient>> Delete(IngredientId ingredientId);
 
 }

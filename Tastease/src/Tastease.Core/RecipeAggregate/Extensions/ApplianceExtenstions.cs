@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Tastease.Core.RecipeAggregate.Requests;
 using Tastease.Core.RecipeAggregate.Tables;
 using Tastease.SharedKernel;
 
@@ -20,6 +21,13 @@ public static class ApplianceExtenstions
         Name = appliance.Name,
         Description = appliance.Description,
         Id = new ApplianceId(Guid.Parse(appliance.Guid))
+    };
+    public static Appliance ToAppliance(this AddApplianceRequest appliance) => new Appliance
+    {
+        Description = appliance.Description,
+        Name = appliance.Name,
+        Id = new ApplianceId(Guid.NewGuid())
+
     };
 }
 

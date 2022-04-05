@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Tastease.Core.RecipeAggregate.Requests;
+﻿using Tastease.Core.RecipeAggregate.Requests;
 using Tastease.Core.RecipeAggregate.Validators;
 using FluentAssertions;
 using Xunit;
 using FluentValidation;
+using Tastease.UnitTests.Collections;
 
 namespace Tastease.UnitTests.Core.Validator
 {
+    [Collection(nameof(CoreTestCollection))]
     public class BasePaginationRequestTests
     {
         [Theory]

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Ardalis.EFCore.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Tastease.Core.RecipeAggregate.Tables;
+using Tastease.Core.Utils;
 using Tastease.Infrastructure.Data.CoreContext.Config;
 
 namespace Tastease.Infrastructure.Data.CoreContext;
@@ -17,8 +18,17 @@ public partial class CoreDbContext : DbContext
   {
     if (!optionsBuilder.IsConfigured)
     {
-      optionsBuilder.UseSqlServer("Server=localhost;Database=TasteaseCore;Trusted_Connection=True;MultipleActiveResultSets=true");
-      //throw new Exception($"{nameof(CoreDbContext)} {nameof(DbContextOptionsBuilder)} was not properly injected.");
+            string connectionString;
+            bool useInMemoryDatabase = ConfigManager.GetFromAppSettingsJson<bool>("UseTestDatabase");
+            if (useInMemoryDatabase) 
+            {
+                optionsBuilder.UseInMemoryDatabase("TasteaseCoreInMemoryConnection").EnableSensitiveDataLogging();
+                return;
+            }
+            connectionString = ConfigManager.GetConnectionStringByKey("TasteaseCoreConnection");
+            optionsBuilder.UseSqlServer(connectionString, 
+                options => options.CommandTimeout(TimeSpan.FromMinutes(10).Seconds));
+
     }
   }
   public virtual DbSet<AllergyTable> Allergies { get; set; }

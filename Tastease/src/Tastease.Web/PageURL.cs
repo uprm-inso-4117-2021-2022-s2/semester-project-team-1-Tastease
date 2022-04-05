@@ -2,6 +2,6 @@
 {
     public static class PageURL
     {
-        public const string Ingredients = "ingredients";
+        public const string Ingredients = "./ingredients", Home ="./";
     }
 }

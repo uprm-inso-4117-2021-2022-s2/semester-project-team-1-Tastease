@@ -45,5 +45,8 @@ public class DefaultCoreModule : Module
         builder.RegisterType<AddIngredientRequestValidator>()
             .As<IValidator<AddIngredientRequest>>()
             .InstancePerLifetimeScope();
+        builder.RegisterType<AddApplianceRequestValidator>()
+            .As<IValidator<AddApplianceRequest>>()
+            .InstancePerLifetimeScope();
     }
 }

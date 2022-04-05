@@ -9,11 +9,11 @@ using Tastease.Core.RecipeAggregate.Tables;
 
 namespace Tastease.Core.RecipeAggregate.Specifications
 {
-    public class PaginatedIngredientsSpec : Specification<IngredientTable>
+    public class PaginatedApplianceSpec : Specification<ApplianceTable>
     {
-        public PaginatedIngredientsSpec(BasePaginationRequest pagination) 
+        public PaginatedApplianceSpec(BasePaginationRequest pagination)
         {
-            Query.OrderBy(ingredient => ingredient.Id)
+            Query.OrderBy(appliance => appliance.Id)
                 .Skip(pagination.Page * pagination.Size)
                 .Take(pagination.Size);
         }
