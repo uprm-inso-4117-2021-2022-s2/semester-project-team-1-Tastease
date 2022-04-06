@@ -1,0 +1,161 @@
+﻿
+@inject IIngredientService ingredientService
+@inject ILiteralService literalService
+@inject IApplianceService applianceService
+@inject DialogService dialogService
+@inject NotificationService notificationService
+
+<RadzenTemplateForm Data="@Pantry" Submit="@((Pantry args) => { Submit(args); })">
+        <div class="row">
+            <div class="col-md-12">
+                <RadzenTextBox Name="PantryName" @oninput=@(args => OnPantryNameChange(args.Value.ToString())) Class="w-100" />
+                <RadzenRequiredValidator Component="PantryName" Text="Pantry Name is required" Style="position: absolute"/>
+                <RadzenRegexValidator Component="PantryName" Text="Pantry Name must not be empty" Pattern="^(?!\s*$).+" Style="position: absolute" />
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <RadzenFieldset Text="Ingredient Info">
+                    <div class="row">
+                        <div class="col-md-4 align-items-center d-flex">
+                            <RadzenLabel Text="Ingredient" />
+                        </div>
+                        <div class="col-md-8">
+                            
+                            <RadzenDropDown Name="IngredientName" @bind-Value=SelectedIngredientNames Multiple="true" Placeholder="Select Ingredient Names" 
+                                    Data=@Ingredients.Select(ingredient=>ingredient.Name) style="width: 100%;"/>
+                            <RadzenRequiredValidator Component="IngredientName" Text="At least One Ingredient is required" Style="position: absolute"/>
+                        </div>
+                    </div>                   
+                </RadzenFieldset>
+
+                <RadzenFieldset Text="Appliance Info">
+                     <div class="row">
+                        <div class="col-md-4 align-items-center d-flex">
+                            <RadzenLabel Text="Appliance Name" />
+                        </div>
+                         <div class="col-md-8">
+                            <RadzenDropDown @bind-Value=SelectedApplianceNames Multiple="true" AllowClear="true" Placeholder="Select Appliance Names" 
+                                    Data=@Appliances.Select(appliance=>appliance.Name) style="width: 100%;" />                              
+                        </div>
+                    </div>
+                 </RadzenFieldset>   
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-12 d-flex align-items-end justify-content-center" style="margin-top: 16px;">
+                 <RadzenButton ButtonType="ButtonType.Submit" Icon="save" Text="Save" />
+            </div>
+        </div>
+    </RadzenTemplateForm>
+
+@code {
+
+    public Pantry Pantry { get; set; }
+    
+    [Parameter]
+    public IEnumerable<string> SelectedIngredientNames { get; set; }
+    
+    [Parameter]
+    public IEnumerable<string> SelectedApplianceNames { get; set; }
+    
+    [Parameter]
+    public string PantryName { get; set; }
+
+    public List<Ingredient> Ingredients { get; set; }
+
+    public List<Appliance> Appliances { get; set; }
+
+    [Parameter]
+    public Cook Cook { get; set; }
+    
+    [Parameter]
+    public EventCallback<Cook> CookChanged { get; set; }
+
+    void OnPantryNameChange(string name)
+    {
+        PantryName = name;
+    }
+
+    protected override void OnInitialized()
+    {
+        var blender = new Appliance
+        {
+           Name = "Oster Blender",
+           Description = "Oster Party Blender XL",
+           Id = new ApplianceId(Guid.NewGuid())
+        };
+
+        var banana = new Ingredient
+        {
+            Name = "Banana",
+            Type = IngredientType.Fruits,
+            NutritionalValues = new List<NutritionalProperty>
+            {
+                new NutritionalProperty
+                {
+                    Value = 22,
+                    Category = NutritionalCategory.Protein
+                }
+
+
+            },
+
+            ShelfLives = new List<ShelfLife>
+            {
+                new ShelfLife
+                {
+                    State = State.Ambient,
+                    Time = TimeSpan.Zero
+                }
+            }
+        };
+
+        var mango = new Ingredient
+        {
+            Name = "Mango",
+            Type = IngredientType.Fruits,
+            NutritionalValues = new List<NutritionalProperty>
+            {
+                new NutritionalProperty
+                {
+                    Value = 23,
+                    Category = NutritionalCategory.Protein
+                }
+
+
+            },
+
+            ShelfLives = new List<ShelfLife>
+            {
+                new ShelfLife
+                {
+                    State = State.Ambient,
+                    Time = TimeSpan.Zero
+                }
+            }
+        };
+
+        Ingredients = new List<Ingredient>{mango,banana};
+        Appliances = new List<Appliance>{blender};
+        Pantry = new Pantry(Cook);
+    }
+
+    async void Submit(Pantry pantry)
+    {
+        pantry.Ingredients = Ingredients
+            .Where(ingredient => (SelectedIngredientNames?.Any() ?? false)
+               && SelectedIngredientNames.Contains(ingredient.Name))
+            .ToHashSet();
+
+        pantry.Appliances = Appliances
+            .Where(appliance => (SelectedApplianceNames?.Any() ?? false)
+               && SelectedApplianceNames.Contains(appliance.Name))
+            .ToHashSet();
+        
+            Cook.Pantries.Add(pantry);    
+        await CookChanged.InvokeAsync(Cook);
+    }
+
+}

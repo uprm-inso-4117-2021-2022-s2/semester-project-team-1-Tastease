@@ -67,8 +67,11 @@
   
         </Columns>
     </RadzenDataGrid>
-    <RadzenButton Click=@(args => OnClick("Primary button with text and icon")) Text="Add New" Icon="add_circle_outline" ButtonStyle="ButtonStyle.Warning" />
-
+     <div class="row">
+         <div class="col-lg-12 text-right">
+             <RadzenButton Click=OpenPantryPopup Text="Add Pantry" Icon="add_circle_outline" ButtonStyle="ButtonStyle.Warning" />
+         </div>
+     </div>
 </RadzenCard>
 
 
@@ -95,6 +98,12 @@
 @code {
     public Cook Cook { get; set; }
     dynamic? ativePopup { get; set; }
+    
+    public IEnumerable<string> SelectedIngredientNames { get; set; }
+    
+    public IEnumerable<string> SelectedApplianceNames { get; set; }
+    
+    public string PantryName { get; set; }
     protected override void OnInitialized()
     {
         var banana = new Ingredient
@@ -226,8 +235,13 @@
         };
     }
 
-    void OnClick(string buttonName)
+    public async Task OpenPantryPopup()
     {
+        ativePopup = await dialogService.OpenAsync("Add Pantry", ds =>
+            @<div>
+                <PantryPopup @bind-Cook=Cook SelectedApplianceNames=SelectedApplianceNames SelectedIngredientNames=SelectedIngredientNames PantryName=PantryName/>
+            </div>
+            ,new DialogOptions { Draggable = true, Resizable = true });
 
     }
 
@@ -266,6 +280,7 @@
             , new DialogOptions { Draggable = true, Resizable = true });
 
     }
+
 
 }
 
