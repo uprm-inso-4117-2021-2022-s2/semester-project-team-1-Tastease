@@ -1,82 +1,52 @@
 ﻿
+
 @inject IIngredientService ingredientService
 @inject ILiteralService literalService
 @inject IApplianceService applianceService
 @inject DialogService dialogService
 @inject NotificationService notificationService
 
-<RadzenTemplateForm Data="@Pantry" Submit="@((Pantry args) => { Submit(args); })">
-        <div class="row">
-            <div class="col-md-14">
-                <RadzenTextBox Name="PantryName" @oninput=@(args => OnPantryNameChange(args.Value.ToString())) Class="w-100" />
-                <RadzenRequiredValidator Component="PantryName" Text="Pantry Name is required" Style="position: absolute"/>
-                <RadzenRegexValidator Component="PantryName" Text="Pantry Name must not be empty" Pattern="^(?!\s*$).+" Style="position: absolute" />
-            </div>
+<RadzenTemplateForm Data="@Pantry" Submit="@((PantryPopupPageModel args) => { Submit(args); })">
+    <div class="row">
+        <div class="col-lg-12">
+            <RadzenTextBox Name="PantryName" @bind-Value=Pantry.PantryName Class="w-100"/>
+            <RadzenRequiredValidator Component="PantryName" Text="Pantry Name is required" Style="position: absolute"/>
+            <RadzenRegexValidator Component="PantryName" Text="Pantry Name must not be empty" Pattern="^(?!\s*$).+" Style="position: absolute" />
         </div>
-        
-        <div class="row">
-            <div class="col-md-12">
-                <RadzenFieldset Text="Ingredient Info">
-                    <div class="row">
-                        <div class="col-md-4 align-items-center d-flex">
-                            <RadzenLabel Text="Ingredient" />
-                        </div>
-                        <div class="col-md-8">
-                            
-                             <RadzenDropDown AllowClear="true" AllowFiltering="true" Name="IngredientName" @bind-Value=SelectedIngredientNames Multiple="true" Placeholder="Select Ingredient Names" 
-                                    Data=@Ingredients style="width: 50%;"/>
-                            <RadzenRequiredValidator Component="IngredientName" Text="At least One Ingredient is required" Style="position: absolute"/>
-                        </div>
-                    </div>                   
-                </RadzenFieldset>
-
-                <RadzenFieldset Text="Appliance Info">
-                     <div class="row">
-                        <div class="col-md-4 align-items-center d-flex">
-                            <RadzenLabel Text="Appliance Name" />
-                        </div>
-                         <div class="col-md-8">
-                             <RadzenDropDown AllowFiltering="true" @bind-Value=SelectedApplianceNames Multiple="true" AllowClear="true" Placeholder="Select Appliance Names" 
-                                    Data=@Appliances style="width: 50%;" />                              
-                        </div>
-                    </div>
-                 </RadzenFieldset>   
-            </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <RadzenLabel Text="Ingridients" Component="SelectedIngredient"/>
+            <RadzenDropDown AllowClear="true" AllowFiltering="true" Name="SelectedIngredient" 
+                TextProperty="Name" @bind-Value=Pantry.SelectedIngredient 
+                Multiple="true" Placeholder="Select Ingredient Names" 
+                Data=@Ingredients  Class="w-100"/>
+            <RadzenRequiredValidator Component="SelectedIngredient" Text="At least One Ingredient is required" Style="position: absolute"/>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-md-12 d-flex align-items-end justify-content-center" style="margin-top: 16px;">
-                 <RadzenButton ButtonType="ButtonType.Submit" Icon="save" Text="Save" />
-            </div>
+        <div class="col-lg-6">
+            <RadzenLabel Text="Appliances" Component="SelectedAppliance"/>
+            <RadzenDropDown AllowFiltering="true" @bind-Value=Pantry.SelectedAppliance 
+                TextProperty="Name" Multiple="true" Name="SelectedAppliance"
+                AllowClear="true" Placeholder="Select Appliance Names" 
+                Data=@Appliances  Class="w-100"/>                              
         </div>
-    </RadzenTemplateForm>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-right" style="margin-top: 16px;">
+            <RadzenButton ButtonType="ButtonType.Submit" Icon="save" Text="Save" />
+        </div>
+    </div>
+</RadzenTemplateForm>
 
 @code {
-
-    public Pantry Pantry { get; set; }
-    
     [Parameter]
-    public IEnumerable<string> SelectedIngredientNames { get; set; }
-    
+    public PantryPopupPageModel Pantry { get; set; }
     [Parameter]
-    public IEnumerable<string> SelectedApplianceNames { get; set; }
-    
+    public EventCallback<PantryPopupPageModel> PantryChanged { get; set; }
+    public IEnumerable<Ingredient> Ingredients { get; set; }
+    public IEnumerable<Appliance> Appliances { get; set; }
     [Parameter]
-    public string PantryName { get; set; }
-
-    public IEnumerable<string> Ingredients { get; set; }
-
-    public IEnumerable<string> Appliances { get; set; }
-
-    [Parameter]
-    public Cook Cook { get; set; }
-    
-    [Parameter]
-    public EventCallback<Cook> CookChanged { get; set; }
-
-    void OnPantryNameChange(string name)
-    {
-        PantryName = name;
-    }
+    public EventCallback<PantryPopupPageModel> OnSubmit { get; set; }
 
     protected override void OnInitialized()
     {
@@ -142,25 +112,21 @@
             }
         };
 
-        Ingredients = new List<Ingredient>{mango,banana}.Select(ingredient=>ingredient.Name);
-        Appliances = new List<Appliance>{blender,foodprocessor}.Select(appliance=>appliance.Name);
-        Pantry = new Pantry(Cook);
+        Ingredients = new List<Ingredient>
+        {
+            mango,
+            banana
+        };
+        Appliances = new List<Appliance>
+        {
+            blender,
+            foodprocessor
+        };
     }
 
-    async void Submit(Pantry pantry)
+    async Task Submit(PantryPopupPageModel pantry)
     {
-        pantry.Ingredients = Ingredients
-            .Where(ingredient => (SelectedIngredientNames?.Any() ?? false)
-               && SelectedIngredientNames.Contains(ingredient))
-            .ToHashSet();
-
-        pantry.Appliances = Appliances
-            .Where(appliance => (SelectedApplianceNames?.Any() ?? false)
-               && SelectedApplianceNames.Contains(appliance))
-            .ToHashSet();
-        
-            Cook.Pantries.Add(pantry);    
-        await CookChanged.InvokeAsync(Cook);
+        await OnSubmit.InvokeAsync(pantry);
     }
 
 }

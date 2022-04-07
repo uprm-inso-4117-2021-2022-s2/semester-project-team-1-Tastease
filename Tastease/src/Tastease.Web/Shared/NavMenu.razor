@@ -1,16 +1,38 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">Tastease.Web</a>
-        <button title="Navigation menu" class="navbar-toggler">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </div>
+﻿<div class="top-row pl-4 navbar navbar-dark">
+    <a class="navbar-brand" href="">Tastease</a>
+    <button class="navbar-toggler" @onclick="ToggleNavMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 </div>
-<RadzenPanelMenu>
-    <RadzenPanelMenuItem Text="Recipes" Icon="home">
-        <RadzenPanelMenuItem Text="Ingredients" Path="@PageURL.Ingredients" Icon="bookmark_add"></RadzenPanelMenuItem>
-    </RadzenPanelMenuItem>
-    <RadzenPanelMenuItem Text="User" Icon="account_circle">
-        <RadzenPanelMenuItem Text="CheckBox" Path="@PageURL.Cooks" Icon="check_circle"></RadzenPanelMenuItem>
-    </RadzenPanelMenuItem>
-</RadzenPanelMenu>
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <ul class="nav flex-column">
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="@PageURL.Home" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Home
+            </NavLink>
+        </li>
+        @*<AuthorizeView Roles="CanViewCounterPage">*@
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="@PageURL.ManyCooks">
+                <span class="oi oi-plus" aria-hidden="true"></span> Cooks
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="@PageURL.Ingredients">
+                <span class="oi oi-list-rich" aria-hidden="true"></span>Ingredients
+            </NavLink>
+        </li>
+    </ul>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

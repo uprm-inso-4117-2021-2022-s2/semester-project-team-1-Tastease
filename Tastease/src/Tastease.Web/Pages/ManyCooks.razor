@@ -1,0 +1,29 @@
+﻿@page "/cooks"
+<h1>Cooks Pagee</h1>
+<RadzenDataList WrapItems="true" AllowPaging="true" Data="@Cooks" TItem="CookPageModel" PageSize="5" 
+    PagerHorizontalAlign="HorizontalAlign.Left">
+    <Template Context="cook">
+        <CookCard Cook=cook/>
+    </Template>
+</RadzenDataList>
+
+
+@code
+{
+    public IEnumerable<CookPageModel> Cooks { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Cooks = new List<CookPageModel>
+        {
+            new CookPageModel
+            {
+                Id = CookId.New(),
+                ExperienceLevel = ExperienceLevel.Beginner,
+                Name = "Billy"
+               
+            }
+
+        };
+    }
+}

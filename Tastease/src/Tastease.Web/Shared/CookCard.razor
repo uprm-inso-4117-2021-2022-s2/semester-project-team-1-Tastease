@@ -1,0 +1,23 @@
+﻿@inject NavigationManager NavigationManager
+<RadzenCard>
+    <h3 class="h5">Cook</h3>
+    <div class="d-flex flex-row">
+        <RadzenImage Path="https://img.favpng.com/3/19/22/computer-icons-person-png-favpng-LCdUmsY83twN3VK0xYeuXREBP.jpg" Class="rounded-circle float-left mr-3" Style="width: 100px; height: 100px;" />
+        <div>
+            <b>@Cook.Name</b>
+            <div class="mt-3">Experience Level</div>
+            <b>@Cook.ExperienceLevel</b>
+        </div>
+        @if(EnableNavigation)
+        {
+            <RadzenButton Click=@(args => NavigationManager.ToIndividualCook(Cook)) Icon="visibility"/>  
+        }
+    </div>
+</RadzenCard>
+
+@code {
+    [Parameter, EditorRequired]
+    public CookPageModel Cook { get; set; }
+    [Parameter]
+    public bool EnableNavigation { get; set; } = true;
+}

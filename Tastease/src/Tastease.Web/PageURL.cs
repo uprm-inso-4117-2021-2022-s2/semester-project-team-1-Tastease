@@ -1,7 +1,9 @@
-﻿namespace Tastease.Web
+﻿using Tastease.Core.RecipeAggregate.PageModels;
+
+namespace Tastease.Web;
+
+public static class PageURL
 {
-    public static class PageURL
-    {
-        public const string Ingredients = "./ingredients", Cooks = "./cooks", Home ="./" ;
-    }
+    public const string Ingredients = "./ingredients", ManyCooks = "./cooks", Home ="./" ;
+    public static string IndividualCook(CookPageModel cook) => $"./cooks/{cook.Slug}";
 }
