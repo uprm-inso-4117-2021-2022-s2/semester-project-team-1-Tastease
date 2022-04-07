@@ -27,7 +27,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tastease.SharedKernel", "sr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tastease.UnitTests", "tests\Tastease.UnitTests\Tastease.UnitTests.csproj", "{1DC7F5A0-DDF7-4975-84EB-05F4FC1B6AB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tastease.LoadTests", "Tastease.LoadTests\Tastease.LoadTests.csproj", "{B44174C0-6449-46BF-902B-6FB5DF5EB8FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tastease.LoadTests", "Tastease.LoadTests\Tastease.LoadTests.csproj", "{B44174C0-6449-46BF-902B-6FB5DF5EB8FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

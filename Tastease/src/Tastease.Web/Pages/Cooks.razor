@@ -1,0 +1,287 @@
+﻿@page "/cooks"
+
+
+
+@inject DialogService dialogService
+@inject NotificationService notificationService
+
+<RadzenCard class="m-3">
+    <h3 class="h5">Cook</h3>
+    <div class="d-flex flex-row">
+        <RadzenImage Path="https://img.favpng.com/3/19/22/computer-icons-person-png-favpng-LCdUmsY83twN3VK0xYeuXREBP.jpg" Class="rounded-circle float-left mr-3" Style="width: 100px; height: 100px;" />
+         <div>
+             <div>
+                     Username
+             </div>
+             <b>@Cook.Name</b>
+             <div class="mt-3">Experience Level</div>
+             <b>@Cook.ExperienceLevel</b>
+         </div>
+    </div>
+</RadzenCard>
+
+<RadzenCard class="m-3">
+    <RadzenAccordion>
+        <Items>
+            <RadzenAccordionItem Text="Allergies" Icon="assignment">
+                <RadzenDataGrid AllowColumnResize="true" AllowSorting="true" PageSize="5" AllowPaging="true" PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true"
+                    Data="@Cook.Allergies" TItem="Allergy">
+                    <Template Context="allergy">
+                        <RadzenDataGrid AllowFiltering="true" AllowPaging="true" AllowSorting="true" Data="@allergy.Ingredient.NutritionalValues" TItem="NutritionalProperty">
+                            <Columns>
+                                <RadzenDataGridColumn TItem="NutritionalProperty" Property="Value" Title="Value" />
+                                <RadzenDataGridColumn TItem="NutritionalProperty" Property="Category" Title="Category" />
+                            </Columns>
+                        </RadzenDataGrid>
+                        <RadzenDataGrid AllowFiltering="true" AllowPaging="true" AllowSorting="true" Data="@allergy.Ingredient.ShelfLives" TItem="ShelfLife">
+                            <Columns>
+                                <RadzenDataGridColumn TItem="ShelfLife" Property="State" Title="State" />
+                                <RadzenDataGridColumn TItem="ShelfLife" Property="Time" Title="Duration" />
+                            </Columns>
+                        </RadzenDataGrid>
+                    </Template>
+                    <Columns>
+                        <RadzenDataGridColumn TItem="Allergy" Property="Ingredient.Name" Title="Name" Frozen="true" Width="140px" />
+                        <RadzenDataGridColumn TItem="Allergy" Property="Serverity" Title="Severity" Width="140px"/>
+                        <RadzenDataGridColumn TItem="Allergy" Property="Ingredient.Type" Title="Type" Width="200px" />
+                    </Columns>
+                </RadzenDataGrid>
+            </RadzenAccordionItem>
+        </Items>
+    </RadzenAccordion>
+</RadzenCard>
+
+
+
+<RadzenCard class="m-3">
+    <b>Pantries</b>
+    <RadzenDataGrid AllowColumnResize="true" AllowSorting="true" PageSize="5" AllowPaging="true" PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true"
+        Data="@Cook.Pantries" TItem="Pantry">
+        <Columns>
+            <RadzenDataGridColumn TItem="Pantry" Property="Pantry.Name" Title="Name" Frozen="true" Width="140px" />
+            <RadzenDataGridColumn TItem="Pantry" Title="Name" Frozen="true" Width="140px" Filterable="false">
+                <Template Context="pantry">
+                    <RadzenButton Click=@(args => OnPantryView(pantry)) Text="Read More" Icon="visibility" ButtonStyle="ButtonStyle.Secondary" />
+                </Template>
+            </RadzenDataGridColumn>
+  
+        </Columns>
+    </RadzenDataGrid>
+     <div class="row">
+         <div class="col-lg-12 text-right">
+             <RadzenButton Click=OpenPantryPopup Text="Add Pantry" Icon="add_circle_outline" ButtonStyle="ButtonStyle.Warning" />
+         </div>
+     </div>
+</RadzenCard>
+
+
+
+
+
+
+<style>
+.product-title {
+    min-height: 72px;
+    color: black;
+    background-color: rgba(210, 215, 211, .7);
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+}
+
+.row {
+    width : 600px
+}
+</style>
+
+@code {
+    public Cook Cook { get; set; }
+    dynamic? ativePopup { get; set; }
+    
+    public IEnumerable<string> SelectedIngredientNames { get; set; }
+    
+    public IEnumerable<string> SelectedApplianceNames { get; set; }
+    
+    public string PantryName { get; set; }
+    protected override void OnInitialized()
+    {
+        var banana = new Ingredient
+            {
+                Name = "Banana",
+                Type = IngredientType.Fruits,
+                NutritionalValues = new List<NutritionalProperty>
+            {
+                new NutritionalProperty
+                {
+                    Value = 22,
+                    Category = NutritionalCategory.Protein
+                }
+
+
+            },
+
+                ShelfLives = new List<ShelfLife>
+            {
+                new ShelfLife
+                {
+                    State = State.Ambient,
+                    Time = TimeSpan.Zero
+                }
+            }
+            };
+        var mango = new Ingredient
+            {
+                Name = "Mango",
+                Type = IngredientType.Fruits,
+                NutritionalValues = new List<NutritionalProperty>
+            {
+                new NutritionalProperty
+                {
+                    Value = 23,
+                    Category = NutritionalCategory.Protein
+                }
+
+
+            },
+
+                ShelfLives = new List<ShelfLife>
+            {
+                new ShelfLife
+                {
+                    State = State.Ambient,
+                    Time = TimeSpan.Zero
+                }
+            }
+            };
+
+        Cook = new Cook
+            {
+                Allergies = new List<Allergy>
+            {
+                new Allergy
+                {
+                    Serverity = Serverity.Moderate,
+                    Ingredient = banana
+                },
+                new Allergy
+                {
+                    Serverity = Serverity.Moderate,
+                    Ingredient = mango
+                },
+            },
+                ExperienceLevel = ExperienceLevel.Beginner,
+                Name = "Billy",
+                Pantries = new List<Pantry>
+                 {
+                   new Pantry(Cook)
+                   {
+                       Name = "First Pantry",
+                       Cook = Cook,
+                       Ingredients = new List<Ingredient>
+                       {
+                           new Ingredient
+                           {
+                               Name = "Meat",
+                               Type = IngredientType.Protein,
+                               ShelfLives = new List<ShelfLife>
+                               {
+                                   new ShelfLife
+                                   {
+                                       State = State.Ambient,
+                                       Time = TimeSpan.Zero
+                                   }
+                               },
+                               NutritionalValues = new List<NutritionalProperty>
+                               {
+                                   new NutritionalProperty
+                                   {
+                                       Value = 23,
+                                       Category = NutritionalCategory.Fat
+                                   }
+                               }
+                           }  
+
+                       },
+                       Appliances = new List<Appliance>
+                       {
+                           new Appliance
+                           {
+                               Name = "Razor",
+                               Description = "Doug Marcaida: It will Keal",
+                               Id = ApplianceId.Empty
+                           },
+                           new Appliance
+                           {
+                               Name = "Knife",
+                               Description = "Should Cut",
+                               Id = ApplianceId.Empty
+                           },
+                           new Appliance
+                           {
+                               Name = "Spoon",
+                               Description = "Big or small spoon?",
+                               Id = ApplianceId.Empty
+                           },
+                           new Appliance
+                           {
+                               Name = "Frying Pan",
+                               Description = "Be carefull to not fry yourself",
+                               Id = ApplianceId.Empty
+                           }
+                       }
+                   }
+            }
+        };
+    }
+
+    public async Task OpenPantryPopup()
+    {
+        ativePopup = await dialogService.OpenAsync("Add Pantry", ds =>
+            @<div>
+                <PantryPopup @bind-Cook=Cook SelectedApplianceNames=SelectedApplianceNames SelectedIngredientNames=SelectedIngredientNames PantryName=PantryName/>
+            </div>
+            ,new DialogOptions { Draggable = true, Resizable = true });
+
+    }
+
+    public async Task OnPantryView(Pantry pantry)
+    {
+        ativePopup = await dialogService.OpenAsync("Nutritional Property", ds =>
+            @<div>
+                <b>Ingredients</b>
+                <RadzenDataGrid AllowFiltering="true" AllowPaging="true" AllowSorting="true" Data="@pantry.Ingredients" TItem="Ingredient">
+                    <Template Context="ingredient">
+                        <RadzenDataGrid AllowFiltering="true" AllowPaging="true" AllowSorting="true" Data="@ingredient.NutritionalValues" TItem="NutritionalProperty">
+                            <Columns>
+                                <RadzenDataGridColumn TItem="NutritionalProperty" Property="Value" Title="Value" />
+                                <RadzenDataGridColumn TItem="NutritionalProperty" Property="Category" Title="Category" />
+                            </Columns>
+                        </RadzenDataGrid>
+                        <RadzenDataGrid AllowFiltering="true" AllowPaging="true" AllowSorting="true" Data="@ingredient.ShelfLives" TItem="ShelfLife">
+                            <Columns>       
+                                <RadzenDataGridColumn TItem="ShelfLife" Property="State" Title="State" />
+                                <RadzenDataGridColumn TItem="ShelfLife" Property="Time" Title="Duration" />
+                            </Columns>
+                        </RadzenDataGrid>
+                    </Template>
+                    <Columns>
+                        <RadzenDataGridColumn TItem="Ingredient" Property="Ingredient.Name" Title="Name" Width="140px" />
+                    </Columns>
+                </RadzenDataGrid>
+                <b>Appliances</b>
+                <RadzenDataGrid AllowFiltering="true" AllowPaging="true" AllowSorting="true" Data="@pantry.Appliances" TItem="Appliance">
+                    <Columns>
+                        <RadzenDataGridColumn TItem="Appliance" Property="Name" Title="Name" Width="140px" />
+                        <RadzenDataGridColumn TItem="Appliance" Property="Description" Title="Description" Width="140px" />
+                    </Columns>
+                </RadzenDataGrid>
+            </div>
+            , new DialogOptions { Draggable = true, Resizable = true });
+
+    }
+
+
+}
+
+
