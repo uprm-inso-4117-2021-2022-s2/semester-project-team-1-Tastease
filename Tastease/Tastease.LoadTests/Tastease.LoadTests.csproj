@@ -26,7 +26,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\tests\Tastease.UnitTests\Tastease.UnitTests.csproj" />
+    <ProjectReference Include="..\src\Tastease.Core\Tastease.Core.csproj" />
+    <ProjectReference Include="..\src\Tastease.Infrastructure\Tastease.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

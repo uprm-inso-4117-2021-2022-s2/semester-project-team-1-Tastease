@@ -2,7 +2,11 @@
 using NBomber.Contracts;
 using NBomber.CSharp;
 using Tastease.Core.RecipeAggregate.Requests;
-using Tastease.UnitTests.Fixtures;
+using Tastease.Core.RecipeAggregate.Tables;
+using Tastease.Core.RecipeAggregate.Validators;
+using Tastease.Core.Services;
+using Tastease.Infrastructure.Data;
+using Tastease.Infrastructure.Data.CoreContext;
 
 namespace NBomberTest
 {
@@ -10,8 +14,11 @@ namespace NBomberTest
     {
         static async Task Main(string[] args)
         {
-            var serviceFixture = new ServicesFixture();
-            var result = await serviceFixture.ApplianceService.Add(new AddApplianceRequest
+            var applianceService = new ApplianceService(
+                    new EfRepository<ApplianceTable>(new CoreDbContext()),
+                    new AddApplianceRequestValidator(),
+                    new BasePaginationRequestValidator());
+            var result = await applianceService.Add(new AddApplianceRequest
             {
                 Name = "Pencil",
                 Description = "Sharp"
@@ -22,9 +29,13 @@ namespace NBomberTest
             }
             var step = Step.Create("fetch_appliances", async context =>
             {
-                var response = await serviceFixture.ApplianceService.GetById(result.Value.Id);
+                var applianceService = new ApplianceService(
+                    new EfRepository<ApplianceTable>(new CoreDbContext()),
+                    new AddApplianceRequestValidator(),
+                    new BasePaginationRequestValidator());
+                var response = await applianceService.GetById(result.Value.Id);
                 return response.IsSuccess
-                    ? Response.Ok()
+                    ? Response.Ok(response)
                     : Response.Fail();
             });
             var scenario = ScenarioBuilder.CreateScenario("fetch_appliances_scenario", step)
