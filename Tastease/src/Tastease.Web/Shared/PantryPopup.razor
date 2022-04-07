@@ -7,7 +7,7 @@
 
 <RadzenTemplateForm Data="@Pantry" Submit="@((Pantry args) => { Submit(args); })">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-14">
                 <RadzenTextBox Name="PantryName" @oninput=@(args => OnPantryNameChange(args.Value.ToString())) Class="w-100" />
                 <RadzenRequiredValidator Component="PantryName" Text="Pantry Name is required" Style="position: absolute"/>
                 <RadzenRegexValidator Component="PantryName" Text="Pantry Name must not be empty" Pattern="^(?!\s*$).+" Style="position: absolute" />
@@ -23,8 +23,8 @@
                         </div>
                         <div class="col-md-8">
                             
-                            <RadzenDropDown Name="IngredientName" @bind-Value=SelectedIngredientNames Multiple="true" Placeholder="Select Ingredient Names" 
-                                    Data=@Ingredients.Select(ingredient=>ingredient.Name) style="width: 100%;"/>
+                             <RadzenDropDown AllowClear="true" AllowFiltering="true" Name="IngredientName" @bind-Value=SelectedIngredientNames Multiple="true" Placeholder="Select Ingredient Names" 
+                                    Data=@Ingredients style="width: 50%;"/>
                             <RadzenRequiredValidator Component="IngredientName" Text="At least One Ingredient is required" Style="position: absolute"/>
                         </div>
                     </div>                   
@@ -36,8 +36,8 @@
                             <RadzenLabel Text="Appliance Name" />
                         </div>
                          <div class="col-md-8">
-                            <RadzenDropDown @bind-Value=SelectedApplianceNames Multiple="true" AllowClear="true" Placeholder="Select Appliance Names" 
-                                    Data=@Appliances.Select(appliance=>appliance.Name) style="width: 100%;" />                              
+                             <RadzenDropDown AllowFiltering="true" @bind-Value=SelectedApplianceNames Multiple="true" AllowClear="true" Placeholder="Select Appliance Names" 
+                                    Data=@Appliances style="width: 50%;" />                              
                         </div>
                     </div>
                  </RadzenFieldset>   
@@ -63,9 +63,9 @@
     [Parameter]
     public string PantryName { get; set; }
 
-    public List<Ingredient> Ingredients { get; set; }
+    public IEnumerable<string> Ingredients { get; set; }
 
-    public List<Appliance> Appliances { get; set; }
+    public IEnumerable<string> Appliances { get; set; }
 
     [Parameter]
     public Cook Cook { get; set; }
@@ -84,6 +84,13 @@
         {
            Name = "Oster Blender",
            Description = "Oster Party Blender XL",
+           Id = new ApplianceId(Guid.NewGuid())
+        };
+
+         var foodprocessor = new Appliance
+        {
+           Name = "Food Processor",
+           Description = "Standard Food Processor",
            Id = new ApplianceId(Guid.NewGuid())
         };
 
@@ -123,8 +130,6 @@
                     Value = 23,
                     Category = NutritionalCategory.Protein
                 }
-
-
             },
 
             ShelfLives = new List<ShelfLife>
@@ -137,8 +142,8 @@
             }
         };
 
-        Ingredients = new List<Ingredient>{mango,banana};
-        Appliances = new List<Appliance>{blender};
+        Ingredients = new List<Ingredient>{mango,banana}.Select(ingredient=>ingredient.Name);
+        Appliances = new List<Appliance>{blender,foodprocessor}.Select(appliance=>appliance.Name);
         Pantry = new Pantry(Cook);
     }
 
@@ -146,12 +151,12 @@
     {
         pantry.Ingredients = Ingredients
             .Where(ingredient => (SelectedIngredientNames?.Any() ?? false)
-               && SelectedIngredientNames.Contains(ingredient.Name))
+               && SelectedIngredientNames.Contains(ingredient))
             .ToHashSet();
 
         pantry.Appliances = Appliances
             .Where(appliance => (SelectedApplianceNames?.Any() ?? false)
-               && SelectedApplianceNames.Contains(appliance.Name))
+               && SelectedApplianceNames.Contains(appliance))
             .ToHashSet();
         
             Cook.Pantries.Add(pantry);    
