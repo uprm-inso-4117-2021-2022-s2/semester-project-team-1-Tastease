@@ -1,0 +1,14 @@
+#!/bin/sh
+
+echo "Running pre-commit hook"
+cd tastease
+dotnet test --no-build
+
+# $? stores exit value of the last command
+if [ $? -ne 0 ]; then
+ echo "The tests must pass before allowing this commit"
+ exit 1
+
+echo "Commit approved"
+
+exit 0
