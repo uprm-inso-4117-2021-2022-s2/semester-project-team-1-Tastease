@@ -1,0 +1,10 @@
+in file explorer, go to the root folder, 
+access /.git 
+from there, go to /hooks
+
+Now, remove the pre-commit.sample file. 
+copy the pre-commit file located in 
+tastease/scripts/git_hooks and paste it 
+in the /.git/hooks folder
+
+Done, now the git-hooks are working
